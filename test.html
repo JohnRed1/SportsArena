@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="" id="userInput">
+  <button class="add"  onclick="
+  displayResult();">Add</button>
+  <p class="display"
+></p>
+  
+  <script>
+
+    let userInput = document.getElementById('userInput');
+    let add = document.querySelector('.add');
+    let display = document.querySelector('.display');
+    // console.log(userInput);
+
+    // add.addEventListener('click',displayResult);
+
+    function displayResult (){
+      display.innerHTML = `${userInput.value}`;
+    }
+
+
+  </script>
+</body>
+</html>

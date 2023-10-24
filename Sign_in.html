@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportsArena/Sign_In</title>
+  <link rel="stylesheet" href="mycss/sign_in.css">
+</head>
+<body>
+  <div class="container">
+    <div class="Gt-logo">
+      <a href="./index.html">
+          <h2>SportsArena</h2>
+      </a>
+  </div>  
+
+
+    <div id="signin-form">
+      <form action="#" method="post">
+          <div class="form-group">
+              <label for="signin-username">Username</label>
+              <input type="text" id="signin-username" name="signin-username" required autocomplete="on">
+          </div>
+          <div class="form-group">
+              <label for="signin-password">Password</label>
+              <input type="password" id="signin-password" name="signin-password" required>
+              <!-- <label for="Forget-password" class="Forget-password">Forget password?</label> -->
+              <p class="Forget-password">Forget password?</p>
+          </div>
+
+          <div id="empty-field-alert">
+            <!-- Please fill in all fields. -->
+        </div>
+         
+          <button type="button" id="sign-in-button" onclick="
+          signIn();">Sign In</button>
+
+        <p>Don't have an account yet? <span><a href="Get_started.html">Sign Up</a></span></p>
+      </form>
+  </div>
+
+  </div>
+
+ 
+  <script src="myJs/SportsArena.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="mycss/write4us.css">
+  
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+</head>
+<body>
+
+  <header>
+    <h1>Write for Us</h1>
+</header>
+<div class="container">
+    <p>If you're passionate about writing and want to contribute to <span> SportsArena</span>, we'd love to hear from you!</p>
+   
+      <button class="apply-button">    
+        Get Started
+      </button>
+    
+
+    <div class="redirect-to-sign-in"></div>
+
+
+</div>
+
+  <!-- snackbar -->
+  <div id="apply-form">
+
+    
+    <div class="Gt-logo">
+      <a href="./index.html">
+          <h2>SportsArena</h2>
+      </a>
+      
+
+      <i class="fa fa-close closebtn"></i>
+  </div>
+  
+  <div>
+      <form id="signup-form" action="#" method="post" >
+      
+    
+          <div class="form-group">
+              <label for="Username">Username</label>
+              <input type="text" id="Username" name="Username" placeholder="Enter your Username" required autocomplete="on">
+          </div>
+          <div class="form-group">
+              <label for="country">Country</label>
+              <input type="country" id="country" name="country" placeholder="Select Your Country" required>
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input type="category" id="category" name="category" placeholder="Pick A Category" required>
+          
+        </div>
+          <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <input type="phoneNumber" id="phoneNumber" name="phoneNumber"
+                  placeholder=" Confirm Your Password" required>
+          </div>
+          
+
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="qweryty@gmail.com" required autocomplete="on">
+
+          </div>
+
+          <p class="WarningP"></p>
+
+ 
+
+          <!-- snackbar -->
+          <div id="empty-field-alert">
+              <!-- Please fill in all fields. -->
+          </div>
+
+
+          
+          <button type="button" id="sign-up-button" >Submit</button>
+
+          
+      </form>
+  </div>
+
+           
+  </div>
+
+<script src="myJs/write4us.js">
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportsArena/Sign_Up</title>
+    <link rel="stylesheet" href="mycss/GS.css">
+    
+
+</head>
+
+<body>
+    <div class="container">
+
+       
+
+
+        <div class="Gt-logo">
+            <a href="./index.html">
+                <h2>SportsArena</h2>
+            </a>
+        </div>
+
+
+        <div>
+            <form id="signup-form" action="#" method="post" >
+                <div class="form-group">
+                    <label for="Firstname">First name</label>
+                    <input type="text" id="Firstname" name="Firstname" placeholder=" Enter Your First name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Lastname">Last name</label>
+                    <input type="text" id="Lastname" name="Lastname" placeholder=" Enter Your Last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Username">Username</label>
+                    <input type="text" id="Username" name="Username" placeholder=" Create a Username" required autocomplete="on">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder=" Create a Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password"
+                        placeholder=" Confirm Your Password" required>
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="qweryty@gmail.com" required autocomplete="on">
+
+                </div>
+
+                <p class="WarningP"></p>
+
+       
+
+                <!-- snackbar -->
+                <div id="empty-field-alert">
+                   
+                </div>
+
+
+                
+                <button type="button" id="sign-up-button" onclick="
+                signUp();">Sign Up</button>
+
+                <p>Already have an account? <span><a href="Sign_in.html">Sign In</a></span></p>
+            </form>
+        </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <!-- <div id="signin-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="signin-username">Username</label>
+                    <input type="text" id="signin-username" name="signin-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signin-password">Password</label>
+                    <input type="password" id="signin-password" name="signin-password" required>
+                    <label for="signin-forgotten-password" class="Forget-password">Forget password?</label>
+                </div>
+               
+                <button type="button" id="sign-in-button">Sign In</button>
+            </form>
+        </div> -->
+
+
+
+    </div>
+
+    <script src="myJs/SportsArena.js"></script>
+</body>
+
+</html>
