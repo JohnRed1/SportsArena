@@ -145,7 +145,7 @@ function signUp() {
   // console.log(dataBase);
 
    setTimeout(function () {
-     window.location.href = "sign_in.html";
+     window.location.href = "Sign_in.html";
    }, 2000); // Redirect after 2 seconds (adjust the time as needed)
   }
 }
@@ -224,71 +224,4 @@ function redirectToSignUp() {
   }
 }
 
-// //My Api
-// fetch('https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=c2b140870b934ca69450c9413cc2bc85',{
-
-//   method: 'GET'
- 
-// })
-// .then(response => response.json())
-// .then(response => {
-//   // console.log(response);
-//   let article = response.articles;
-//   console.log(article)
-
-//     if(article.length >= 0){
-//      postTitle.forEach((postTitle,index) => {
-//    postTitle.innerText = article[index].title; 
-//    postTitle.style.fontweight = 'bold';
-//    })
-
-//   }
-
-// })
-
-// .catch(err =>{
-//   console.log(err)
-// });
-
-
-// fetch('https://os-sports-perform.p.rapidapi.com/v1/teams/news-feed?team_id=44',{
-
-// method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '647c8921f4msh6409fea422c3521p19fc16jsn9c289787866e',
-// 		'X-RapidAPI-Host': 'os-sports-perform.p.rapidapi.com'
-// 	}
-
-
-// })
-// .then(response => response.json())
-// .then(response => {
-
-//   console.log(response);
-
-//   const blogTitle = response.data;
-//   console.log(blogTitle);
-
-//   if(blogTitle.length > 0){
-//      postTitle.forEach((postTitle,index) => {
-//    postTitle.innerText = blogTitle[index].PL; 
-//    })
-
-//   }
-
-
-//   // postTitle.forEach((postTitle,index) => {
-//   //   postTitle.innerText = response[index].name; 
-//   // })
-
-//   // postVisual.forEach((postVisual,index) =>{
-//   //   postVisual.innerHTML = response[index].Url;
-//   // })
-  
-
-// }) 
-
-// .catch(err =>{
-//   console.log(err)
-// });
 
