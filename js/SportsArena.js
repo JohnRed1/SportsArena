@@ -146,7 +146,7 @@ function signUp() {
 
    setTimeout(function () {
      window.location.href = "Sign_in.html";
-   }, 2000); // Redirect after 2 seconds (adjust the time as needed)
+   }, 1500); // Redirect after 2 seconds (adjust the time as needed)
   }
 }
 
