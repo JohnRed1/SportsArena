@@ -19,7 +19,7 @@ body.dark {
 .main{
   /* background-color:#434852; */
   /* background-color:#333308 ; */
-  border: 1px solid ;
+  border: 1px solid #6666 ;
   /* background-color: var(--background-color-dark);
   color: var(--text-color-dark); */
 
@@ -52,12 +52,17 @@ body.dark {
 .light-dark{
   border: none;
   position:absolute;
-  right: 8.1rem;
+  right: 10rem;
+  padding:0.1rem 0.28rem;
   border-radius: 50%;
+
+
+ 
   
 }
 .light-dark span{
-font-size:1.6rem;  
+font-size:1.3rem; 
+margin-top: 5px; 
 }
 .profile-pic img{
   width: 2rem;
@@ -70,7 +75,6 @@ font-size:1.6rem;
   font-size: 1.1rem;
   font-weight: 400;
   margin: 5px;
-  color:var(--text-color-dark);
   cursor: pointer;
 
 }
@@ -274,6 +278,8 @@ input::placeholder{
   border: 1px solid #e7e3e3;
   padding: 0.3rem 1rem;
   border-radius: 0.2rem;
+  white-space:nowrap;
+  margin-left: 10px;
  
 
 

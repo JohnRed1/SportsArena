@@ -11,12 +11,14 @@
     font-family: 'Raleway', sans-serif;
     border: none;
   
+ 
   
   }
   
   body{
     height: 100dvh;
     scroll-behavior: smooth;
+   
    
     
   }
@@ -33,15 +35,16 @@
     top: 0;
     z-index: 100;  
     border-bottom: 1px solid #ffffff;
-    width: 100dw;
+    width: 100dvw;
     
   
   }
-  
-  .Logo, h2{
+ 
+  .logo h2{
    font-size: 2.2em;
    text-decoration: none;
    color: #ffffff;
+ 
    
    
   }
@@ -122,9 +125,8 @@
   }
   .Single-post-cont{
     padding: 10rem 0rem;
-   
-    
-   
+  
+    width: 100%;
    
   }
   .Single-post{
@@ -133,41 +135,47 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
+  
+  
   }
   .SP-Title{
-    width:60rem;
-    
-
+     max-width:50rem;
+  
   }
 
-  .SP-Title h2{
+  .SP-Title ,h3{
     text-align: center;
     color: #000000;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     width: 100%;
+
+   
   }
  .SP-visuals{
     width: 45rem; 
     border-radius: 0.2rem;
     padding: 0.4rem;
-    padding-bottom: 0;
 
     box-shadow: 1px 1px 1px 1px #faf5f5(170, 168, 168, 0.5);
+  
    
     
    
   }
-  .SP-visuals img {
+  #Post-Visual img {
     width: 100%;
+
   }
   .SP-Author{
     display: flex;
     padding: 0.3rem;
+    padding-bottom: 0;
     justify-content: start;
     align-items: center;
+
   }
-  .SP-Author p{
+ #Author-Name{
     color: #000000;
     font-size: 1rem;
   }
@@ -180,22 +188,28 @@
     padding: 1.1rem;
     border-right: 1px solid #ded3d3;
     margin-top: 1rem;
+
+  
    
   }
-  .SP-Content p{
+  .SP-Content p ,.SP-Content-1 {
     font-size: 1.1rem;
-    line-height: 2.19rem;
-    color: #000000;
+    line-height: 2.1rem;
+    color:#000000;
     font-weight: 400;
     width:100%;
+    padding-bottom: 1.2rem;
+   
+    
   }
+ 
 
   
 .Footer-cont{
   border: 1px solid #666600;
   background-color: #001900;
   z-index: 100;
-  width: 100dvw;
+  width: 100dw;
 
  
 }
@@ -249,7 +263,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0;
+  padding-top: 1rem;
+
 }
 .material-symbols-outlined{
   color:#000000;
@@ -267,9 +282,16 @@
   color: rgb(218, 126, 126); 
 }
 
+.BookMarks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .Related-Posts-cont{
   position: fixed;
-  right: 0;
+  right: 20px;
    /* background-color: red; */
   width: 19.7rem;
   padding:1rem;
@@ -280,6 +302,105 @@
   scroll-behavior: smooth;
   border-left: 1px solid #ebe4e4;
 
+
+}
+
+.SP-Comments{
+  border: 1px solid #6666;
+  width: 44rem;
+  margin-top: 1rem; 
+ padding: 1rem;
+ border-radius: 0.3rem;
+ display: none;
+}
+
+#comment-list{
+  padding: 1rem;
+ 
+ 
+  border-bottom: 1px solid #6666;
+
+}
+.single-comment{
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+
+}
+.comment{
+  border: 1px solid #6666;
+  padding:1rem ;
+  text-align: start;
+  margin-left:0.3rem;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  
+
+
+}
+.delete{
+  color:#000000;
+  cursor: pointer;
+  font-size: 1.2rem;
+ 
+}
+
+.user{
+  padding:1.1rem 0.5rem;
+  border: 1px solid #d1c8c866;
+  white-space: nowrap;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+
+.commentNicon{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+
+}
+
+
+.commentNicon h4{
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+#comment-input::placeholder{
+ color:#6666;
+ text-align:start;
+
+}
+#comment-input{
+  border-bottom: 1px solid #6666;
+  max-height: 100px;
+  width:30rem;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  outline: none;
+  text-align:left;
+  resize: none; 
+ -webkit-resizer: none; 
+  
+
+}
+#add-comment-button{
+  padding: 0.6rem;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #666600;
+
+
+}
+
+.comment-form{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
 
 }
 .Related-Posts-cont::-webkit-scrollbar {
@@ -343,10 +464,11 @@
 }
 
 .logout{
-  color: #666600;
+  color: #ffffff;
   cursor: pointer;
   padding: 5px;
   background-color: #001900;
+  border: 1px solid #ffffff;
 }
 .logout:hover{
   color: #b62700;
@@ -506,7 +628,7 @@ border-radius: 50%;
 
   }
 
-  .SP-Title h2{
+  .SP-Title h3{
     text-align: center;
     color: #000000;
     font-size: 1.5rem;
@@ -820,9 +942,7 @@ border-radius: 50%;
 
 
 }
-@media screen and (min-width: 600px ) and (max-width:820px)  {
- 
-}
+
 
 
 

@@ -6,6 +6,7 @@ let commentField = document.querySelectorAll('.comment-section');
 
 
 
+
 let signOut = document.querySelector(".logout");
 signOut.addEventListener("click", logOut);
 
@@ -95,9 +96,7 @@ function checkLoginStatus() {
           if (storedBookmarks) {
             try {
               bookmarkedDb = JSON.parse(storedBookmarks);
-              console.log('Valid bookmarks data:', bookmarkedDb);
-              // console.log('valid');
-              // return bookmarkedDb
+            
             } catch (error) {
               console.error('Error parsing bookmarks data:', error);
               // Handle the error if needed
@@ -111,14 +110,15 @@ function checkLoginStatus() {
         }
         else {
           emptyFieldAlert("Removed from Bookmarks");
+
           bookMark.innerText = "bookmark";
-          // localStorage.removeItem("bookmarks");
-           // Remove the item from the array at the current index
+
             bookmarkedDb.splice(index, 1);
 
             // Save the updated bookmarks array to localStorage
             localStorage.setItem('bookmarks', JSON.stringify(bookmarkedDb));
-            console.log(bookmarkedDb)
+          
+            
         }
 
       
@@ -137,11 +137,12 @@ function checkLoginStatus() {
     signIn.style.display = "none";
     tagLineSignUp.style.display = "none";
     bookMarkPage.style.display = 'inline-block';
+ 
    
     let verifiedUser = checkForUser(); 
     // console.log(verifiedUser);
 
-    // Display the user's name and sign-out button
+
     signUp.innerHTML = `${verifiedUser.username}<i class="fa fa-user red"></i>`;
     signUp.style.display = "inline-block";
     logOutIcon.style.display = "inline-block";
@@ -150,11 +151,15 @@ function checkLoginStatus() {
 
     document.querySelector(".profile").href = "Profile-Page.html";
   } else {
-    // If user is not logged in, show the sign-in and sign-up buttons
-    signIn.style.display = "inline-block";
-    tagLineSignUp.style.display = "inline-block";
+    
     bookMarkPage.style.display = 'none';
+    tagLineSignUp.style.display = "inline-block";
+    
+    signIn.style.display = "inline-block";
+
   
+
+      
   }
 }
 
@@ -169,12 +174,16 @@ function logOut(e) {
   localStorage.removeItem('loggedIn');
 
 
-  // Replace user-related elements to default elements
+  
 
   signIn.style.display = "inline-block";
   tagLineSignUp.style.display = "inline-block";
   signOut.style.display = "none";
   signUp.innerHTML = "<button>Get Started</button>";
+  bookMarkPage.style.display = 'none';
+  logOutIcon.style.display = 'none';
+  
+  
 
   document.querySelector(".profile").href = "Get_started.html";
 

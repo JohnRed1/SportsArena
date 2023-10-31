@@ -40,7 +40,7 @@
 
         <div class="Nav-Link-cont">
           <div class="Nav-links">
-            <a href="">Write For Us</a>
+            <a href="">Write for us</a>
             <p class="BookMarks"></p>
             <a href="Sign_in.html" target="_parent" class="sign-in">Sign In</a>
           </div>
@@ -65,7 +65,7 @@
             </div>
             <div class="users-name">
               <a href="Profile-Page.html">
-                <h3>John Red</h3>
+                <h3 id="users-name">John Red</h3>
               </a>
             </div>
           </div>
@@ -80,12 +80,12 @@
 
         <div class="Past-Posts">
           <div class="Hero-post">
-            <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-            <h2>
+            <img src="./images/02_Turkey_Money-1024x683.webp" id="Hero-Img" alt="" />
+            <h2 id="Hero-title">
               Turkey's summer spending spree: 'They've gone crazy. I'm not sure
               where they found the money'
             </h2>
-            <p>
+            <p id="Hero-excerpt" >
               After business labelled "unsustainable", a look at how Turkey's
               clubs bought so lavishly in the most recent transfer window
             </p>
@@ -173,66 +173,12 @@
               </p>
             </div>
           </div>
-          <div class="other-posts">
-            <div class="other-posts-pic">
-              <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
+          
             </div>
-            <div class="other-posts-texts">
-              <h2>
-                Turkey's summer spending spree: 'They've gone crazy. I'm not
-                sure where they found the money'
-              </h2>
-              <p>
-                After business labelled "unsustainable", a look at how Turkey's
-                clubs bought so lavishly in the most recent transfer window
-              </p>
-            </div>
+          
           </div>
-          <div class="other-posts">
-            <div class="other-posts-pic">
-              <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-            </div>
-            <div class="other-posts-texts">
-              <h2>
-                Turkey's summer spending spree: 'They've gone crazy. I'm not
-                sure where they found the money'
-              </h2>
-              <p>
-                After business labelled "unsustainable", a look at how Turkey's
-                clubs bought so lavishly in the most recent transfer window
-              </p>
-            </div>
-          </div>
-          <div class="other-posts">
-            <div class="other-posts-pic">
-              <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-            </div>
-            <div class="other-posts-texts">
-              <h2>
-                Turkey's summer spending spree: 'They've gone crazy. I'm not
-                sure where they found the money'
-              </h2>
-              <p>
-                After business labelled "unsustainable", a look at how Turkey's
-                clubs bought so lavishly in the most recent transfer window
-              </p>
-            </div>
-          </div>
-          <div class="other-posts">
-            <div class="other-posts-pic">
-              <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-            </div>
-            <div class="other-posts-texts">
-              <h2>
-                Turkey's summer spending spree: 'They've gone crazy. I'm not
-                sure where they found the money'
-              </h2>
-              <p>
-                After business labelled "unsustainable", a look at how Turkey's
-                clubs bought so lavishly in the most recent transfer window
-              </p>
-            </div>
-          </div>
+       
+          
         </div>
       </div>
     </div>
@@ -284,5 +230,53 @@
     <script src="js/SportsArena.js"></script>
     <script src="js/curentUser.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+    <script>
+
+
+  let sportsDb = JSON.parse(localStorage.getItem('sportsData'));
+
+  const urlA = new URLSearchParams(window.location.search);
+  const id = urlA.get('a');
+  let postAuthor = sportsDb.filter((a)=> a.id == id)[0];
+
+  const authorName = document.getElementById('users-name');
+  authorName.innerText = postAuthor.author;
+  const heroImg = document.getElementById('Hero-Img');
+  heroImg.src = postAuthor.img;
+  const heroTitle = document.getElementById('Hero-title');
+  heroTitle.innerText = postAuthor.title;
+  const heroExcerpt = document.getElementById('Hero-excerpt');
+  heroExcerpt.innerText = postAuthor.content.split(/[.!?]/).slice(0, 1).join(".");
+
+
+
+  
+
+
+
+  // const urlQ = new URLSearchParams(window.location.search);
+  // const idQ = urlQ.get('q');
+  // let aPost = sportsDb.filter((a)=> a.id == idQ)[0];
+
+  // const authorName = document.getElementById('users-name');
+  // authorName.innerText = aPost.author;
+  // const heroImg = document.getElementById('Hero-Img');
+  // heroImg.src = aPost.img;
+  // const heroTitle = document.getElementById('Hero-title');
+  // heroTitle.innerText = aPost.title;
+  // const heroExcerpt = document.getElementById('Hero-excerpt');
+  // heroExcerpt.innerText = aPost.content.split(/[.!?]/).slice(0, 1).join(".");
+
+
+
+
+
+
+  
+
+ 
+
+
+    </script>
   </body>
 </html>

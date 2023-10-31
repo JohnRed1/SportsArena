@@ -2,7 +2,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'ClashDisplay';
+  /* font-family: 'ClashDisplay'; */
+  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -188,6 +189,10 @@
   padding: 0.5rem;
   width:fit-content;
 }
+.post-visual{
+  padding: 1rem;
+ 
+}
 .post-visual img{
   width:7rem;
 
@@ -215,5 +220,83 @@
 .delete{
   color: #666600;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 599px) {
+  .Header{
+   
+    width: 100dvw;
+    
+  
+  }
+
+  .search-bar{
+   display: none;
+    
+  }
+  .Logo h2{
+    font-size: 1.1rem;
+  }
+
+  .Nav-Link-cont{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    white-space: nowrap;
+  
+  }
+
+  .Nav-links a{
+    display: none;
+  }
+
+  .bookmarks-cont{
+    padding:0;
+   
+  
+    
+  }
+
+  .t-e{
+    padding: 0;
+    width:100dvw;
+  }
+
+  .loaded-bookmark{
+    display: flex;
+    align-items:center;
+    border-bottom: 1px solid #666666;
+    justify-content:start;
+
+    
+  }
+
+  .post-visual{
+    padding: rem;
+   
+  }
+
+  .post-visual img{
+    width:5rem;
+  
+  }
+
+  .post-title {
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  .post-excerpt{
+    font-size: 0.5rem;
+    width:100%;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  
+
+
 }
 

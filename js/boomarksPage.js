@@ -41,10 +41,7 @@ function checkLoginStatus() {
     logOutIcon.style.margin = "10px";
     document.querySelector(".profile").href = "Profile-Page.html";
   }
-  // else {
-  //   // If user is not logged in, show the sign-in and sign-up buttons
-  //   signIn.style.display = "inline-block";
-  // }
+ 
 }
 
 function logOut(e) {
@@ -74,8 +71,20 @@ window.onload = function () {
 function loadBookmarksDb() {
   const bookmarksContainer = document.querySelector(".bookmarks-cont");
 
+  const noBookmarksMessage = document.getElementById("noBookmarksMessage");
+
+ 
   // Clear existing content in the container
   bookmarksContainer.innerHTML = "";
+
+  if (bookmarkedDb.length === 0) {
+        noBookmarksMessage.innerText = 'No bookmarked post yet';
+        
+
+      } else {
+        noBookmarksMessage.innerText = '';
+      }
+    
 
   for (let i = 0; i < bookmarkedDb.length; i++) {
     const bookmark = bookmarkedDb[i];
@@ -97,22 +106,34 @@ function loadBookmarksDb() {
 
     const postExcerpt = document.createElement("div");
     postExcerpt.classList.add("post-excerpt");
-    postExcerpt.innerText = bookmark.postExcerpt;
+    postExcerpt.innerText = bookmark.postExcerpt.split(/[.!?]/).slice(0,1).join('.');
 
     const rmBookmark = document.createElement('div');
     rmBookmark.classList.add("rm-bookmark");
     rmBookmark.innerHTML = `<span class="material-symbols-outlined delete" data-index="${i}">delete_forever</span>`;
 
     rmBookmark.addEventListener('click', function() {
-      // Get the index of the bookmark to be deleted from the data attribute
-      const deleteIndex = parseInt(this.querySelector('.delete').getAttribute('data-index'), 10);
+      
 
-      // Remove the corresponding bookmark from the array
-      bookmarkedDb.splice(deleteIndex,1);
+       // Get the index of the bookmark to be deleted from the data attribute
+  const deleteIndex = parseInt(this.querySelector('.delete').getAttribute('data-index'), 10);
 
-      // Update local storage and reload bookmarks
-      localStorage.setItem("bookmarkedDb", JSON.stringify(bookmarkedDb));
-      loadBookmarksDb();
+  // Remove the corresponding bookmark from the array
+  bookmarkedDb.splice(deleteIndex, 1);
+
+  // Update local storage
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarkedDb));
+
+  // Remove the deleted bookmark element from the DOM
+  const bookmarkItem = this.parentElement;
+  bookmarksContainer.removeChild(bookmarkItem);
+
+  loadBookmarksDb();
+
+      
+
+
+      
     });
 
     tNe.appendChild(postTitle);
@@ -125,6 +146,7 @@ function loadBookmarksDb() {
     bookmarksContainer.appendChild(bookmarkItem);
   }
 }
+
 
 
 

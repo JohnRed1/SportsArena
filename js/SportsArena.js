@@ -7,67 +7,24 @@ const signInPasswordInput = document.getElementById("signin-password");
 const signUpForm = document.getElementById("signup-form");
 const signUpButton = document.getElementById("sign-up-button");
 const recentPost = document.querySelector(".RP-Title");
-const trendingPost = document.querySelector(".TP-Title");
+let trendingPost = document.querySelectorAll(".TP-Title");
+let trendingPostVisual = document.querySelectorAll('.TP-visuals');
 let getStarted = document.querySelector(".Get-Started");
-let postTitle = document.querySelectorAll('.RP-Title');
-let authorName = document.querySelectorAll('.Authors-name');
-let postVisual = document.querySelectorAll('.RP-visual');
-let postCategory = document.querySelectorAll('.Post-Category');
-
-let storedSportsData = JSON.parse(localStorage.getItem('sportsData'));
-
-console.log(storedSportsData);
-
-      postVisual.forEach((postVisual,index) => {
-        postVisual.innerHTML = `<img src="${storedSportsData[index].img}" alt="" />`;
-      })
-
-      postCategory.forEach((postCategory,index) => {
-        postCategory.innerText = storedSportsData[index].category;
-      })
-
-
-       postTitle.forEach((postTitle,index) => {
-      postTitle.innerText = storedSportsData[index].title; 
-     postTitle.style.fontWeight = '700';
-    
-     })
-
-
-     if(storedSportsData.length >= 0){
-     authorName.forEach((authorName,index) => {
-      authorName.innerText = storedSportsData[index].author
-     })
-    }
-
-    
-  
-   
-
-
-
-
-
-
-
-
-
-authorName.forEach(function(authorName){
-  authorName.addEventListener('click', () =>{
-    window.location.href= "Author's-Page.html";
-  })
-})
 
 let dataBase = JSON.parse(localStorage.getItem('database')) || [];
 
-// console.log(dataBase);
+
+
+
+
+
+
+
 
 // Snackbar functions
 function emptyFieldAlert(message) {
   // Get the snackbar DIV
   let snackbar = document.getElementById("empty-field-alert");
-
-  // Add the "show" class to DIV
 
   snackbar.className = "show";
   snackbar.textContent = "";
@@ -207,15 +164,6 @@ function signIn() {
  
 
   }
-
-function clickPost() {
-  if (recentPost) {
-    window.location.href = "Single-Post.html";
-  } else if (trendingPost) {
-    window.location.href = "Single-Post.html";
-  }
-}
-
 
 
 function redirectToSignUp() {

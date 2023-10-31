@@ -4,7 +4,7 @@ let signnedIn = localStorage.getItem("loggedIn");
 let profileName = document.getElementById("static-name");
 let profileCountry = document.getElementById("static-country");
 let profilEmail = document.getElementById("static-email");
-let fullName = document.querySelector(".fullname");
+// let fullName = document.querySelector(".fullname");
 let saveBtn = document.getElementById("save-changesbtn");
 let backBtn = document.getElementById("back-btn");
 let editFullName = document.getElementById("fullName");
@@ -19,7 +19,7 @@ let confirmPassword = document.getElementById('confirm-password');
 let savePassword = document.getElementById('save-password');
 let passwordBackBtn = document.getElementById('Password-backBtn');
 let errorMsg = document.querySelector('.errorMsg');
-const headerProfileName = document.querySelector('.profile-name');
+let headerProfileName = document.querySelector('.profile-name');
 let lightDark = document.querySelector('.light-dark');
 
 
@@ -42,57 +42,14 @@ changePassword.addEventListener('click',showPasswordForm);
 savePassword.addEventListener('click',passwordSave);
 
 
-// function passwordSave(){
-
-//   for (let i = 0; i < allUsers.length; i++) {
-//     currentUser = allUsers[i];
-
-//     if (currentUser.password === oldPassword.value) {
-
-//       currentUser.password = newPassword.value;
-
-//       if (newPassword.value !== confirmPassword.value){
-//         errorMsg.innerText = 'Password not match';
-//       }
-   
-//       //  alert('Password Changed');
-//       return currentUser;
-//     }
-//     else{
-//       console.log(oldPassword.value);
-//       errorMsg.innerText = 'Old Password Not Correct';
-//       setTimeout(function () {
-//         errorMsg.innerText = '';
-//       }, 2000);
-    
-//     }
-//   }
 
 
 
 
 
-//   // let updatedPassword = JSON.parse(JSON.stringify(allUsers));
-
-//   // for (let i = 0; i < updatedPassword.length; i++) {
-//   //   let currentPasswordindex = updatedPassword[i];
 
 
-//   //   if (currentPasswordindex === curr) {
-//   //     currentPasswordindex.password = newPassword.value;
-//   //     if(newPassword.value !== confirmPassword){
-//   //       errorMsg.innerText = 'Password not match';
-//   //     }
-//   //     else{
-//   //       errorMsg.innerText = 'Password successfully changed';
 
-//   //     }
-
-
-    
-//   //   }
-//   // }
-  
   
 
 
@@ -102,7 +59,6 @@ savePassword.addEventListener('click',passwordSave);
   
 
 
-// }
 
 function passwordSave() {
   
@@ -183,7 +139,6 @@ function checkForUser() {
     currentUser = allUsers[i];
 
     if (currentUser.username == activeUser) {
-      headerProfileName.innerHTML = currentUser.username;
       return currentUser;
     }
   }
@@ -206,6 +161,7 @@ function saveChanges() {
       currentUserindex.firstName = editedFullName[0];
       currentUserindex.lastName = editedFullName[editedFullName.length - 1];
       // fullName.innerHTML = `${editedFullName[0]} ${editedFullName[editedFullName.length - 1]}`;
+    
     
     }
   }
@@ -261,21 +217,29 @@ function checkStatus() {
   if (!signnedIn) {
     mainEditBtn.style.display = "none";
     profileName.innerHTML = "John Red";
-    fullName.innerHTML = "John Red";
+    // fullName.innerHTML = "John Red";
     changePassword.style.display ='none';
   } else {
     editBtn.style.display = "flex";
     profileName.innerHTML = `${currentUser.firstName} ${currentUser.lastName}`;
     // fullName.innerHTML = `${currentUser.firstName} ${currentUser.lastName}`;
     profilEmail.innerHTML = `${currentUser.email}`;
+    headerProfileName.innerHTML = currentUser.username;
   }
 }
 
 function toggleDarkMode() {
-  const body = document.body;
-  body.classList.toggle("dark");
-  lightDark.innerHTML = `<span class="material-symbols-outlined">
-  dark_mode
-  </span>`;
 
+
+  const body = document.body;
+  const lightDark = document.querySelector('.light-dark');
+
+  body.classList.toggle("dark");
+
+ 
+  if (body.classList.contains("dark")) {
+    lightDark.innerHTML = `<span class="material-symbols-outlined">light_mode</span>`;
+  } else {
+    lightDark.innerHTML = `<span class="material-symbols-outlined">dark_mode</span>`;
+  }
 }

@@ -1,119 +1,341 @@
-let sportsDb = [ 
-  {
-    title: "All Blacks break silence on Bongi Mbonambi accusations - World Rugby investigation ",
-    img:"https://eu-cdn.rugbypass.com/webp-images/wp/wp-content/uploads/2023/10/GettyImages-1752156520.jpg.webp?&maxw=950&comp=80&quot",
-    author:"Ian Cameron",
-    category:"Rugby",
-    content:""
 
+
+let sportsDb = [
+  {
+    title:
+      "All Blacks break silence on Bongi Mbonambi accusations - World Rugby investigation ",
+    img: "https://eu-cdn.rugbypass.com/webp-images/wp/wp-content/uploads/2023/10/GettyImages-1752156520.jpg.webp?&maxw=950&comp=80&quot",
+    author: "Ian Cameron",
+    category: "Rugby",
+    content: "",
+    id: 1,
+    
+    
+    
+  },
+  {
+    title:
+      "Man Utd live updates - Ratcliffe warning, Charlton tributes, Copenhagen build-up",
+    img: "https://i2-prod.mirror.co.uk/incoming/article31266207.ece/ALTERNATES/s510b/1_GettyImages-1728143264.jpg",
+    author: "Tom Victor",
+    category: "Football",
+    content: "",
+    id: 2,
 
   },
   {
-    title: "Man Utd live updates - Ratcliffe warning, Charlton tributes, Copenhagen build-up",
-    img:"https://i2-prod.mirror.co.uk/incoming/article31266207.ece/ALTERNATES/s510b/1_GettyImages-1728143264.jpg",
-    author:"Tom Victor",
-    category:"Football",
-    content:""
-
-
-  },
-  {
-    title: "Man Utd face Jude Bellingham repeat they may live to regret with 17-year-old wonderkid",
-    img:"https://cdn.images.express.co.uk/img/dynamic/67/590x/secondary/5028861.avif?r=1698101838936",
-    author:"Charlie Parker-Turner",
-    category:"Football",
-    content:""
-
+    title:
+      "Man Utd face Jude Bellingham repeat they may live to regret with 17-year-old wonderkid",
+    img: "https://cdn.images.express.co.uk/img/dynamic/67/590x/secondary/5028861.avif?r=1698101838936",
+    author: "Charlie Parker-Turner",
+    category: "Football",
+    content: "",
+    id: 3,
 
   },
   {
-    title: "Arteta responds to Raya criticism with verdict on dropping Arsenal goalkeeper ",
-    img:"https://static.standard.co.uk/2023/10/23/8/GettyImages-1692609711.jpg?crop=8:5,smart&quality=75&auto=webp&width=960",
-    author:"Simon Collings",
-    category:"Football",
-    content:""
-
-
-  },
-  {
-    title: "Afghanistan stun Pakistan and send England to bottom of World Cup table",
-    img:"https://i.guim.co.uk/img/media/7ba8390d9fec4a8039832c96e8d0ccb996e70c85/737_277_6557_3933/master/6557.jpg?width=620&dpr=2&s=none",
-    author:"The Guardian",
-    category:"Cricket",
-    content:""
-
+    title:
+      "Arteta responds to Raya criticism with verdict on dropping Arsenal goalkeeper ",
+    img: "https://static.standard.co.uk/2023/10/23/8/GettyImages-1692609711.jpg?crop=8:5,smart&quality=75&auto=webp&width=960",
+    author: "Simon Collings",
+    category: "Football",
+    content: "",
+    id: 4,
 
   },
   {
-    title: "Andy Goldstein is ADAMANT Manchester United will secure a top four place this season!",
-    img:"https://i2-prod.mirror.co.uk/incoming/article31266207.ece/ALTERNATES/s510b/1_GettyImages-1728143264.jpg",
-    author:"talkSPORT",
-    category:"Football",
-    content:""
-
-
-  },
-  {
-    title: "Jose Antonio Reyes' dad says his son and Arteta were 'like brothers - Daily Mai",
-    img:"https://i.dailymail.co.uk/1s/2023/10/23/21/76908459-12663525-image-a-38_1698093296362.jpg",
-    author:" Isaan Khan",
-    category:"Football",
-    content:""
-
+    title:
+      "Afghanistan stun Pakistan and send England to bottom of World Cup table",
+    img: "https://i.guim.co.uk/img/media/7ba8390d9fec4a8039832c96e8d0ccb996e70c85/737_277_6557_3933/master/6557.jpg?width=620&dpr=2&s=none",
+    author: "The Guardian",
+    category: "Cricket",
+    content: "",
+    id: 5,
 
   },
   {
-    title: "Arsenal reignite bid to sign 79-goal striker as Arteta gets ruthless over Gabriel Jesus form",
-    img:"https://images.ps-aws.com/c?url=https%3A%2F%2Fimages.teamtalk.com%2Fcontent%2Fuploads%2F2023%2F10%2F23210042%2Fdusan-vlahovic-juventus-1.jpg",
-    author:"Rob McCarthy ",
-    category:"Football",
-    content:""
-
-
-  },
-  {
-    title: "Sunderland boss Tony Mowbray outlines Leicester City plan but makes 'devastating' claim",
-    img:"https://i2-prod.stokesentinel.co.uk/incoming/article8846920.ece/ALTERNATES/s810/1_GettyImages-1688510255.jpg",
-    author:"Jordan Blackwell",
-    category:"Football",
-    content:""
-
+    title:
+      "England embarrassed by Sri Lanka and heading for early Cricket World Cup exit",
+    img: "https://i.guim.co.uk/img/media/a1f40f34d159792eabc413a9cee5a28b5f9161c2/0_0_3086_1852/master/3086.jpg?width=620&dpr=2&s=none",
+    author: "Simon Burnton",
+    category: "Cricket",
+    content: "",
+    id: 6,
 
   },
   {
-    title: "Martin Brundle on the United States GP: Lewis Hamilton disqualification shows need to tweak Sprint format",
-    img:"https://e0.365dm.com/23/10/768x432/skysports-motorsport-f1_6332008.jpg",
-    author:"Sky Sports",
-    category:"F1",
-    content:""
-
-
-  },
-  {
-    title: "Every word Mikel Arteta said on David Raya's Arsenal confidence, Bukayo Saka and Aaron Ramsdale",
-    img:"https://i2-prod.football.london/incoming/article27968970.ece/ALTERNATES/s810/0_Mikel-Arteta.jpg",
-    author:"Kaya Kaynak",
-    category:"Football",
-    content:""
-
+    title:
+      "Jose Antonio Reyes' dad says his son and Arteta were 'like brothers - Daily Mai",
+    img: "https://i.dailymail.co.uk/1s/2023/10/23/21/76908459-12663525-image-a-38_1698093296362.jpg",
+    author: " Isaan Khan",
+    category: "Football",
+    content: "",
+    id: 7,
 
   },
   {
-    title: "The Celtic anomaly Champions League rivals don't face as baffled Neil Lennon rinses Atletico Madrid oversigh",
-    img:"https://i2-prod.dailyrecord.co.uk/sport/football/football-news/article31262272.ece/ALTERNATES/s810/0_Screenshot-2023-10-23-at-193055.png",
-    author:"Mark Pirie",
-    category:"Football",
-    content:""
+    title:
+      "Arsenal reignite bid to sign 79-goal striker as Arteta gets ruthless over Gabriel Jesus form",
+    img: "https://images.ps-aws.com/c?url=https%3A%2F%2Fimages.teamtalk.com%2Fcontent%2Fuploads%2F2023%2F10%2F23210042%2Fdusan-vlahovic-juventus-1.jpg",
+    author: "Rob McCarthy ",
+    category: "Football",
+    content: "",
+    id: 8,
 
+  },
+  {
+    title:
+      "Sunderland boss Tony Mowbray outlines Leicester City plan but makes 'devastating' claim",
+    img: "https://i2-prod.stokesentinel.co.uk/incoming/article8846920.ece/ALTERNATES/s810/1_GettyImages-1688510255.jpg",
+    author: "Jordan Blackwell",
+    category: "Football",
+    content: "",
+    id: 9,
 
+  },
+  {
+    title:
+      "Martin Brundle on the United States GP: Lewis Hamilton disqualification shows need to tweak Sprint format",
+    img: "https://e0.365dm.com/23/10/768x432/skysports-motorsport-f1_6332008.jpg",
+    author: "Sky Sports",
+    category: "F1",
+    content: "",
+    id: 10,
+
+  },
+  {
+    title:
+      "Every word Mikel Arteta said on David Raya's Arsenal confidence, Bukayo Saka and Aaron Ramsdale",
+    img: "https://i2-prod.football.london/incoming/article27968970.ece/ALTERNATES/s810/0_Mikel-Arteta.jpg",
+    author: "Kaya Kaynak",
+    category: "Football",
+    content: "",
+    id: 11,
+
+  },
+  {
+    title:
+      "The Celtic anomaly Champions League rivals don't face as baffled Neil Lennon rinses Atletico Madrid oversigh",
+    img: "https://i2-prod.dailyrecord.co.uk/sport/football/football-news/article31262272.ece/ALTERNATES/s810/0_Screenshot-2023-10-23-at-193055.png",
+    author: "Mark Pirie",
+    category: "Football",
+    content: "",
+    id: 12,
+   
   },
   
 ];
 
+sportsDb[0].content = `New Zealand defence coach Scott McLeod believes that the potential loss of hooker Bongi Mbonambi would be ‘a massive’ dent for South Africa’s designs on a lifting the Webb Ellis Cup in five days time.sportsDb[0].content = 'New Zealand defence coach Scott McLeod believes that the potential loss of hooker Bongi Mbonambi would be ‘a massive’ dent for South Africa’s designs on a lifting the Webb Ellis Cup in five days time.Mbonambi faces a World Rugby investigation after England flanker Tom Curry alleged during his side’s Rugby World Cup semi-final defeat on Saturday that the Bok hooker called him a ‘white c***’.
+
+The South African refused to shake Curry’s hand after the game and the allegation – which was picked up by Ben O’Keeffe’s ref mic – was widely reported in the press.' As the only specialist hooker left in the Springboks camp, a potential ban for Mbonambi ahead of the World Cup final would be a significant blow to the defending world champions’ bid to defend the title.
+
+New Zealand defence coach McLeod was asked what sort of impact it would have on the Springboks and he didn’t pull his punches.
+
+“I learned about it this morning. It is something World Rugby will deal with,” said McLeod. ‘If anything came of it, it would be a massive dent for them. He is a leader of their team. When Siya [Kolisi, South Africa captain] goes off, he becomes the captain so I imagine it would impact them.”
+
+This morning World Rugby revealed that they are probing the allegations. “World Rugby takes all allegations of discriminatory behaviour extremely seriously,” a statement from the governing body read. “We can confirm that we are formally reviewing the allegation made by England’s Tom Curry in relation to the use of discriminatory language during the England versus South Africa Rugby World Cup 2023 semi-final on Saturday. World Rugby will not be making further comment until the conclusion of the process.”
+
+ADVERTISEMENT
+The Springboks are also carrying out their own internal investigation.`;
+sportsDb[1].content = `Paul Scholes has urged Sir Jim Ratcliffe to stick with Erik ten Hag when he arrives at Manchester United.
+
+INEOS founder and chief executive Ratcliffe is on course to seal a £1.4billon deal with the Glazers which will see him own 25 per cent of the club. Britain's second-richest man will also assume control of football operations, running the rule over United's transfer business and their choice of manager.
+
+Although Ratcliffe and his fellow INEOS executives appreciate Ten Hag's body of work - with the Independent claiming that they once attempted to put him in charge of another club that they own, French side Nice - there've been suggestions that the Dutch boss could be axed given United's shoddy start to the season. But Scholes, speaking ahead of the Red Devils' narrow 1-0 win at home to Copenhagen on Tuesday thanks to a Harry Maguire goal and Andre Onana penalty save, insists that the former Ajax manager remains the right man to bring the glory days back to Old Trafford."I think it's hard to say - I think he's been a very good coach so far, I like him," the ex-Red Devils midfielder told TNT Sports. "He's been ruthless in a job that is incredibly difficult, he's essentially been thrown out to the lions in the sense of answering every single question thrown at him by the media and I think he's handled it really well.
+
+"Has he put a team together that is good enough to challenge for the Premier League? No, but it looked like a good start towards the end of last season.
+
+"We've come into the summer and the recruitment hasn't been there, it's not at the level of competing with the likes of Manchester City, Arsenal and Liverpool. There's still a lot of work to do, but he's the right man, whether Jim is coming in to bring someone else in or not."`;
+sportsDb[2].content = `Manchester United failed to sign Jude Bellingham when he was 17 years old, and they run the risk of making another significant transfer mistake in January.Manchester United are reportedly running the risk of missing out on signing Schalke star Assan Ouedraogo in January by not acting upon their interest immediately. Numerous top clubs are monitoring the impressive progress of the midfielder, though German sides are starting to push with more vigour to gain the upper hand in negotiations.Erik ten Hag splashed the cash over the summer to inject quality and depth into his ranks. Andre Onana, Mason Mount and Rasmus Hojlund arrived as a trio of marquee purchases, with other loanees signed to plug holes in the injury-ridden squad late in the window.Despite such investment, very little funds were used to bring in players for the future at Old Trafford due to the need for short-term success. However, United do now appear to have one eye on the future and reports have claimed that teenage playmaker Ouedraogo is among their considerations.
+
+However, according to TeamTalk, the Red Devils could miss out on signing the 17-year-old as RB Leipzig are already pushing to strike a deal with Schalke for the midfielder. The Bundesliga outfit are said to have held talks with his entourage and have discussed the conditions of a deal.Liverpool, Chelsea and Bayern Munich also feature on the growing list of Ouedraogo’s admirers, though there is a significant demand for United to have an exciting youngster in the centre of the park given the average age of their current crop of midfielders.With no agreement in place between the German star and Leipzig, the Red Devils have the chance to act quickly and learn from the disappointment of missing out on signing Jude Bellingham to Borussia Dortmund in 2020. United identified the now-Real Madrid star as a target soon after he broke through at Birmingham City but failed to present him with a clear pathway that showed how he would continue his development at the Theatre of Dreams.Aged 17, Bellingham travelled to Manchester with his camp to discuss making the move to Old Trafford and spoke with numerous officials about the club, including Sir Alex Ferguson, but ultimately snubbed the move in favour of heading to the Bundesliga.
+
+Although there was groundwork conducted for the deal, the Red Devils paid the price for not pushing to sign Bellingham early enough and thus provided Dortmund with the chance to pounce. Ten Hag's side can learn from the catastrophic error by pulling out all the stops to sign Ouedraogo in the January transfer window and convincing him to join them as soon as possible rather than giving him a half-hearted blueprint to success that could easily be trumped by rivals.`;
+sportsDb[3].content = `Arsenal manager Mikel Arteta has dismissed concerns that David Raya is suffering from a crisis of confidence.
+
+Raya has come under scrutiny for his performances lately, with the goalkeeper lobbed by Mykhailo Mudryk’s cross during Saturday’s 2-2 draw at Chelsea.Arteta has insisted he will not drop players based on errors and Raya is expected to keep his place for Tuesday’s game against Sevilla.
+
+The Spaniard is in the spotlight after taking Aaron Ramsdale’s place as Arsenal’s No1 following his summer move from Brentford.
+
+
+
+But when asked if Raya is suffering with the spotlight, Arteta said: “I haven’t seen that. If I am fair, I haven’t seen that at all.
+
+“That’s the pressure of playing in big clubs where you have to win and you have to be at your best, and you have someone next to you who is pushing you every single day.
+
+“If we go player, by player, position by position, you will tell me what’s happening at left-back, what happens with the holding-midfielder.“You asked Jorginho a question already and Gabriel Jesus is here, there’s another question on that. That’s the debate.
+
+“That’s the beauty of the game as well. The fact that you have other options as well is going to make those talks more frequent.”Raya has had some shaky moments in recent weeks and came under fire for his performance against Manchester City too.
+
+Arteta, however, has suggested he will not drop players just because they make an error.
+
+“It depends where that is coming from,” he said. “Someone from football, when errors are part of football and mistakes happen, from defenders, from strikers and from goalkeepers for sure. For sure not [realistic to expect a change every time].”`;
+sportsDb[4].content = `Afghanistan pulled off their second giant-killing act of the Cricket World Cup with a memorable eight-wicket victory against Pakistan on Monday.
+
+Afghanistan’s top three batters smashed fifties and their captain, Hashmatullah Shahidi, made an unbeaten 48 at No 4 in their pursuit of a 283-run victory target that they accomplished with one over to spare.
+
+It was Afghanistan’s first ODI victory against Pakistan in eight attempts and the outcome leaves England, the defending champions, at the bottom of the points table.
+
+Afghanistan beat Pakistan by eight wickets: Cricket World Cup 2023 – as it happened
+Read more
+It was a clinical chase by Shahidi’s men, who had stunned England earlier in the tournament, after Pakistan posted 282 for seven thanks to half-centuries by the captain Babar Azam and the opener Abdullah Shafique.
+
+“This win tastes nice,” a beaming Shahidi said after their second victory in five matches. “The way we chased today was very professional.”
+
+Azam won the toss and elected to bat against a spin-heavy Afghan attack which kept things tight in the first 10 powerplay overs.
+
+Afghanistan packed in four spinners in their XI but it was the pacer Azmatullah Omarzai who struck first by dismissing Imam-ul-Haq for 17.
+
+The teenage spinner Noor Ahmad (three for 49) dismissed Shafique (58) and Mohammad Rizwan (eight) in successive overs in a memorable World Cup debut.
+
+Azam (74) fell to Ahmad as well, leaving Iftikhar Ahmed and Shadab Khan to provide a late flourish.
+
+Ahmed clobbered four sixes in his belligerent 40, while Khan contributed as many runs before falling to the last ball of the innings.Afghanistan raced to the 100-mark in the 16th over with Rahmanullah Gurbaz (65) and Ibrahim Zadran (87) combining in a breakneck opening stand of 130. They made Pakistan’s bowling look pedestrian and Azam’s men did not help their cause with sloppy fielding.
+
+Shaheen Afridi returned to break the burgeoning stand, dismissing Gurbaz, but Zadran and Rahmat Shah, who made 77 not out, continued the good work.
+
+Hasan Ali ended Zadran’s gallant knock but Shah and Shahidi milked the Pakistan attack with consummate ease during their unbroken 96-run stand to seal a memorable victory over their neighbours.
+
+“That really hurt us,” a dejected Azam said after Pakistan’s third defeat in five matches left their semi-final hopes in the balance. “We got a good total but our bowling was not up to the mark. In World Cups you need all three departments firing and we haven’t done that.”`;
+sportsDb[5].content = `After their disappointing start to this World Cup, England wanted to use this game to set a new level of performance, and in a way they did. This was a fresh low, and since arriving in India they have now lost four games, their confidence, their reputation and at times it seems all reason, and it isn’t over yet. In one of India’s most batting-friendly venues, against struggling, injury-ravaged opponents, England won the toss, chose to bat and were skittled for just 156, the lowest total registered on this ground in a one-day international. From there Sri Lanka’s second victory of the tournament was humiliatingly straightforward.
+
+After a fortnight in freefall this was supposed to be the moment England’s bungee rope pulled taut and they started flying upwards. It turned out there were further depths to plumb, and with India next on Sunday they might be a long way from rock bottom yet.
+
+Jos Buttler reacts to being dismissed for eight in England's innings against Sri Lanka
+Buttler admits England hit ‘huge low’ in World Cup defeat by Sri Lanka
+Read more
+They made three changes for last Saturday’s thrashing by South Africa and there were three more here, with the aim – laughable in hindsight – of bolstering their batting. For the first time in ODIs, and the first time in any format for more than a century, England picked a team without any players younger than 30. Clearly they had concluded, as in a very different context Mike Pence recently said of Vivek Ramaswamy, that now is not the time for on-the-job training. Or alternatively that it would be wise to protect those players who might have another World Cup in them from further scarring.
+
+Because this team is not so much bad as broken. There is no simple sporting explanation for their collapse, in a must-win game, from 45 without loss to 85 for five and onwards, downwards from there, for the way that senior players, primed and pressure-tested, in full knowledge of the team’s position and their own responsibility, so meekly surrendered.
+
+This is not to belittle Sri Lanka, but it certainly helps when your opponents are so willing to beat themselves. Many of those who won the title in 2019 are still in the side but England’s world champions are no more. They have ceased to be. They have not been officially eliminated, but it is only a matter of time and the really painful part of their World Cup starts here, with a period of prolonged and perhaps literally pointless torture. After they had lost three of their first four games the format of this tournament seemed bizarrely charitable, contriving to offer them hope of still qualifying for the semi-finals. After four defeats from five it seems unfathomably cruel, forcing this hollow shell of a team to continue parading around India for another two and a half weeks.As against South Africa, it had started so well. On that occasion the rosy glow of optimism lasted until the third ball of the sixth over, when Reece Topley shattered a bone in his finger and his team’s fragile confidence snapped with it. This time it took a ball fewer, Dawid Malan ending a promising opening partnership – at one point he and Jonny Bairstow scored six fours in 10 balls and appeared to be having some measure of fun – by getting the thinnest of edges to Angelo Mathews’ third delivery in ODI cricket for three and a half years.
+
+It could, amazingly, have been worse. Bairstow pushed the first ball of the day down the ground for three, but it had flicked a pad on its way into his bat and the review that Sri Lanka discussed and rejected would have found him emphatically out. Ben Stokes survived a review when he was yet to score, was nearly caught, brilliantly, at backward square leg on 12, and was on 13 when he was given out lbw but saved by the gentlest brush of ball on bat, before going on to top-score for England with 43 off 73.England lost all 10 wickets for 111 runs, some of them really putting the dismal into dismissal. Joe Root ran himself out in search of a nonexistent run; Bairstow clumped a truly miserable shot straight to mid-on; Moeen Ali could not possibly have presented the fielder at backward point with a more straightforward catch, nor Stokes the man at deep midwicket. Perhaps, though, it was Adil Rashid’s departure that best summed up the team’s day, the 35-year-old contriving to be run out at the non-striker’s end off a wide while not attempting a run.
+
+Only two Englishmen have scored more runs in this World Cup than Harry Brook, who was dropped for this game. Eleven have scored more than Liam Livingstone, who replaced him and scored a single to bring his tournament total, in four innings, to 31, and seems not so much out of form but a complete stranger to it. Jos Buttler, excellently caught behind by Kusal Mendis off the outside edge, is averaging 19 and has scored only 10 more runs in the tournament than Mark Wood, England’s No 11.
+
+The only way England might have successfully defended their total was to take a couple of early wickets and hope they were not alone in being prone to collapses. They did their bit, David Willey dismissing Kusal Perera and Mendis for four and 11 respectively, but Sri Lanka refused to do theirs. Pathum Nissanka and Sadeera Samarawickrama came together with their side needing 134 at three an over and made their task look even more trivial than it sounded, both scoring half-centuries as they steered their side to victory with eight wickets, and 146 balls, remaining.`;
+sportsDb[6].content = `As Francisco Reyes switches on the light in his basement, sheer pride fills the room.
+
+The 66-year-old cannot stop ushering Mail Sport in different directions, pointing out a huge collection of his son’s football boots, shirts and pictures.
+
+The central theme in both this room and the house in Utrera, a municipality on the outskirts of Seville, is Jose Antonio Reyes. The former Arsenal winger died aged 35 in a car crash in southern Spain on June 1, 2019, when the vehicle he and his cousin Jonathan, 23, were in overturned and burst into flames. Reyes’ other cousin, Juan Manuel Calderon, survived with severe burns after trying to rescue them.The reverberations from that wreckage are still being felt. On Monday, manager Mikel Arteta along with other Arsenal staff members visited a memorial area at Sevilla’s Ramon Sanchez Pizjuan Stadium. Arteta and Sevilla president Jose Castro later laid floral tributes in the Sevilla museum, where there is a commemorative area for Reyes.
+
+Arsenal face Sevilla on Tuesday for the first time in a competitive game since Reyes’s death. Of the teams the Spaniard represented, which include Atletico Madrid, Real Madrid and Benfica, Arsenal and Sevilla are the two which were particularly close to his heart, according to his father.‘He liked everything about Arsenal,’ Francisco tells Mail Sport, as his mother Mariana nods with pride. ‘Apart from Sevilla, the second favourite club for us as a family and for Jose was Arsenal. The match will be a lot of feeling. We want a draw!
+
+‘(Atletico) Madrid said to Jose, “Do you want to come back to your home country?” If they didn’t say that, he would have stayed at Arsenal. Arsene Wenger really was the best coach. After the death, he spoke to me, he made a nice speech. He said it was a huge loss that everybody felt at the club.‘Edu and (Robert) Pires used to call him “brother”, and he’d call them “brother”. Jose and Arteta used to sleep in the same room when they were away with Spain. They were like brothers, too.’
+
+Arteta himself said in his pre-match press conference on Monday: ‘We spent quite a lot of time together. At that (youth) age, I can’t recall a better player. 
+
+'He had everything, he played for both clubs and is a big part of our history. He is probably up there (pointing to the sky) and feeling proud for both clubs. Tomorrow will be a special night for him.’ 
+
+Back at Reyes’s home, each pair of boots he used in his career are pristinely lined up against a wall. The number of shirts hung is in the dozens, including the one worn in Arsenal’s final game at Highbury against Wigan.
+
+It has been a big week for the family. Jose’s 16-year-old son, Jose Antonio Reyes Jnr, signed his first professional contract with Real Madrid last Tuesday. Francisco says: ‘Jose would be so proud of him.’
+
+Reyes played for Arsenal between 2004 and 2007 and won an FA Cup and Premier League title with the Gunners
++6
+View gallery
+Reyes played for Arsenal between 2004 and 2007 and won an FA Cup and Premier League title with the Gunners
+
+His father claimed that he and Arteta (right) were 'like brothers' and that 'Jose and Arteta used to sleep in the same room when they were away with Spain'
++6
+View gallery
+His father claimed that he and Arteta (right) were 'like brothers' and that 'Jose and Arteta used to sleep in the same room when they were away with Spain'
+
+Arteta's side are preparing to take on Sevilla in the Champions League on Tuesday night
++6
+View gallery
+Arteta's side are preparing to take on Sevilla in the Champions League on Tuesday night
+
+Reyes started out at CD Utrera before joining Sevilla as a 10-year-old. He would become one of Europe’s most promising talents, joining the Gunners for £17million in January 2004. Just four months later, he won the Premier League in the Invincibles season. He made 69 appearances for the Gunners, scoring 16 goals.
+
+After spells at Real and Atletico Madrid and Benfica, he returned to his beloved Sevilla in 2012 and won three consecutive Europe League titles. His status at the club is clear.
+
+‘Reyes for us was a special star,’ Sevilla president Castro tells Mail Sport. ‘And for me, he was like a son because I saw him grow up as a child first, and as a footballer, in Utrera. His early death has undoubtedly made him a symbol, a myth of Sevilla FC.’
+
+In the Utrera streets, the feelings remain. A statue of Jose, unveiled in August, is in front of the local stadium. Workers there lead me to his brother Jesus, 43. ‘The Arsenal match brings a complicated feeling,’ Jesus tells Mail Sport. ‘There’s too many emotions. He was such a splendid person. There is still pain in my heart. He would tell me it was wonderful playing for Arsenal. My thoughts will only be for him.’
+
+IT'S ALL KICKING OFF! 
+It's All Kicking Off is an exciting new podcast from Mail Sport that promises a different take on Premier League football, launching with a preview show today and every week this season.
+
+It is available on MailOnline, Mail+, YouTube , Apple Music and Spotify
+
+
+`;
+sportsDb[7].content = `Arsenal have reportedly reignited their bid to try and bring a highly-rated Juventus striker to The Emirates in the January transfer window.
+
+The Gunners have had an unbeaten start to the season but have not looked particularly fluid or threatening in attack so far and there are strong suggestions that Mikel Arteta will look to add another central striker in the new year.
+
+Ivan Toney and Victor Osimhen are the two names that continue to be mentioned as options for the north London side. However, a fresh report on Monday states that Arsenal are ready to move for former target Vlahovic again.That news, which has been reported by Tutto Juve, will be welcomed by many Gunners fans who have not been impressed with the output from Gabriel Jesus.
+
+The Brazilian has scored just three times in 10 games in all competitions this season, missing several changes in the process.
+
+Vlahovic has long been thought of as a striker whose game is well-suited to the Premier League, having previously been linked with the likes of Manchester United and Tottenham.
+
+Indeed, Arsenal themselves failed with an attempt to sign the Serbian back in 2022, with Juve rejecting their advances at the time The 23-year-old has scored 27 goals in 70 total games for the Turin giants, including four in seven games this term.
+
+Reports also state that both Chelsea and Atletico Madrid hold an interest in the player, with January viewed as the perfect time to strike – if Juve decide they want to cash in.
+
+Vlahovic is currently valued at €70million (£61m) by Transfermarkt, a figure that shouldn’t be an issue for Arsenal.`;
+sportsDb[8].content = `Sunderland boss Tony Mowbray has encouraged his players to be brave in the face of a well-coached Leicester City side with “devastating individuals”.
+
+The Black Cats arrive at the King Power Stadium on Tuesday night on the back of two defeats but still sitting sixth in the division. And even though they are taking on a City side looking to become the first second-tier side to win 12 of their first 13 games since 1905, he wants his team to be on the front foot.He does not want to defend wave after wave of attacks, which he knows is something that City can produce. Mowbray said: "We have to be brave, we have to believe in the talent we have on the pitch, we have to get the ball to them and let them do what they do.“We have to have a percentage of the ball that puts them on the back foot and makes them run back towards their own goal, rather than defend wave after wave. Certainly in some games I’ve watched them play, it’s what they do, there’s wave after wave of attacks and eventually they break you down. A lot of that is credit to the coach.” “When I watch them, they are obviously well coached,” he said. “You have to give the coach a lot of credit for the way he’s managed to create the team.
+
+“They play very much like we play, how they build, from a four to a three. They’re a well-coached football team. He’s spent some time with Manchester City and Pep (Guardiola) and that’s very obvious from watching his team play, how they play very positional football. They’re dangerous. Good players playing positional football is very difficult to deal with.”`;
+sportsDb[9].content = `Sky Sports F1's Martin Brundle reviews a United States GP that saw Max Verstappen claim a Sprint and race double, amid plenty of controversy and confusion as Lewis Hamilton and Charles Leclerc were disqualified on Sunday evening.Sky Sports F1's Martin Brundle delivers his expert verdict on a United States GP that saw Max Verstappen made to work extremely hard to complete a Sprint and race double.
+
+It was an intriguing and relentless weekend of Formula 1 in Austin, which provided some intense action at times, but created more questions than answers.On the face of it, the results were simply two more victories for Max Verstappen and Red Bull to add to the many this season, but as we have seen more recently, McLaren, Mercedes and Ferrari are hunting them down. Verstappen's mercurial skills and speed are fully required.There's no doubt that the Sprint format events put the teams under a lot of pressure and overall, we don't get particularly positive feedback from them. With just one practice session before the specification and set-up is locked in by Parc Fermé rules, especially at a relatively unknown circuit like Losail in Qatar, or a bumpy circuit such as COTA in Austin, this leaves them underprepared, which is far from ideal with such complex cars.
+
+And that's assuming the first practice session has representative weather and they don't have any reliability issues or accidents.And there's the first question: do we want the jeopardy and variability of some teams missing their ultimate pace, or is this wasting the resource and skills of teams and drivers in a 'not very F1' manner?
+
+We had 20 per cent of the field starting the main Sunday race from the pit lane, in the form of both Aston Martins and both Haas cars, because they were better breaking out of Parc Fermė and trying for a more competitive race set up. And from Friday afternoon onwards, with two qualifying sessions and two races to come, some drivers were consigned to a difficult car for the rest of the weekend.
+
+This is not ideal or necessary, and while I don't like us to keep messing with the format, we must make some changes for next season and beyond. It's too much of a lottery which has far reaching consequences, as we would find out several hours after the Sunday GP.Max has a fair point that the Sprint gives you half the story for race day and takes away some anticipation. I'd still much rather watch a Sprint than a free practice session personally.
+
+Another issue is that we currently have three different event tyre allocation scenarios, two different qualifying formats, and two different race formats. Teams and media alike have to keep refreshing their memories on the ramifications each weekend - and so what chance do the fans have of remembering it all?`;
+sportsDb[10].content = `Arsenal boss Mikel Arteta has spoken to the press ahead of his side's Champions League clash against Sevilla at the Ramon Sanchez-Pizjuan Stadium Has Raya's error made you consider rotating your goalkeeper?
+
+We will see tomorrow with the line-up. All the players available have chances to play and I'm sure that I will not take a decision based on an only action [of the game].Did you sign Kai Havertz with his Champions League record in mind?
+
+Well that's certainly one of the reasons. His quality and the number of things he’s done already in his career at his age. Then to improve the starting XI as well because he’s a tremendous player who’s going to help us to be better.Is it realistic to call for a change in goalkeeper every time he makes an error?
+
+It depends where that is coming from. Someone from football, when errors are part of football and mistakes happen, from defenders, from strikers and from goalkeepers for sure. For sure not [realistic to expect a change every time].He strikes you as still being as confident as ever even with the extra pressure?
+
+That’s the pressure of playing in big clubs where you have to win and you have to be at your best, and you have someone next to you who is pushing you every single day. If we go player, by player, position by position, you will tell me what's happening at left-back, what happens with the holding midfielder. You asked Jorginho a question already and Gabriel Jesus is here, there's another question on that. That's the debate. That's the beauty of the game as well. The fact that you have other options as well is going to make those talks more frequent.
+
+Is Saka part of the leadership group?
+
+Yes.
+
+Are you happy with how the new generation are stepping up into the leadership role given the senior players who left in the summer?
+
+Yes, I think it's really important for them. The role that they have in our way of playing in our team and our club has to be mirrored with the leadership level that they should have around the team to make the team grow. I think it's the perfect environment. We have a really good mixture of players, teams and experiences. It’s going to be a really valuable time to spend with those guys to understand what happens behind the scenes as well.
+
+Has Ramsdale travelled?
+
+Yes.
+
+So he's part of the squad?
+
+Yes.
+
+Vinicius Jr. was racially abused here on Saturday. Do you have any concerns for your players and will you prepare them for it?
+
+What I can say is Sevilla reacted in a really strong and quick way. Great. Let's enjoy a beautiful football atmosphere. It doesn't get much better than the atmosphere here and I hope that we can just talk about the football and enjoy that atmosphere tomorrow.
+
+It was a lot of players' first Champions League away game vs Lens. What do you think they've learnt from it?
+
+There were a few from that game. Especially that in the Champions League you cannot give anything away. The boxes are tremendously important. When you have control of the game there are going to be moments where that can get away really quickly and you're going to have to understand why that’s happening, and how the game went away from us. There was a lot in our side to lose that game the way we did, even though looking back on it twice, we didn’t deserve that result.`;
+sportsDb[11].content = `Bemused Neil Lennon admits he can't understand why Celtic played Hearts on Sunday - while several Champions League sides received a Saturday fixture.
+
+Brendan Rodgers side saw off Hearts in a comfortable 4-1 victory in front of the Sky Sports cameras just days before they face Atletico Madrid a crucial Group E clash. The Scottish Premiership champions are looking to secure their first points of the group stage campaign when the La Liga heavyweights arrive at Celtic Park - but former Parkhead captain and boss Lennon has been irked by the extra strain placed on the Hoops.Diego Simeone's men ran out 3-0 winners over Celta VIgo on Saturday - which Lennon notes will give the Spaniards an extra day of recovery. The Irishman also pointed to the English Premier League card which saw the four Champions League sides - Manchester City, Arsenal, Manchester United and Newcastle United - play their weekend matches on Saturday.Lennon told PLZ: "Celtic are playing on a Sunday afternoon when they have got a Champions League game on the Wednesday night. Atletico Madrid played on the Saturday evening, why are Celtic playing on a Sunday afternoon?"Now they have only got Monday and Tuesday to recover, and then they are playing against Atletico Madrid. I know it might be for TV, but Man United played on Saturday evening.
+
+"Arsenal played on Saturday evening at 5.30pm. Man City played; all their teams that are in the Champions League played on the Saturday. The Scottish representatives play on the Sunday with a day less recovery. I just don't get it."`;
 
 let sportsFeeds = JSON.stringify(sportsDb);
-localStorage.setItem('sportsData',sportsFeeds);
-
+localStorage.setItem("sportsData", sportsFeeds);
 
 
 

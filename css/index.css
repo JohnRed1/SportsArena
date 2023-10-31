@@ -13,6 +13,10 @@
 }
 
 
+
+
+
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -22,6 +26,9 @@
   border: none;
 
 
+}
+ul{
+  color:red
 }
 
 body{
@@ -50,9 +57,12 @@ body{
 }
 
 .Logo, h2{
- font-size: 2.2em;
+ font-size: 2rem;
  text-decoration: none;
- color: #ffffff;
+ color: #fcfcfc;
+ box-shadow: 1px 1px 1px 1px rgba(193, 230, 123, 0.1);
+ transition: all .2s ease-in-out;
+
  
  
 }
@@ -63,12 +73,13 @@ body{
   
 }
 .Searchbar {
-  padding: 0.38rem 8rem;
+  padding: 0.37rem 8rem;
   border-top-left-radius: 1.1rem;
   border-bottom-left-radius: 1.1rem;
   border: 0;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.20);
   outline:none;
+  text-align: start;
  
 
 
@@ -78,69 +89,124 @@ body{
 .Searchbar::placeholder{
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
-  color: #000000;
+  color: #6666;
   text-align: center;
 }
 .search-button{
   padding:0.41em 0.9em;
   background-color:#666600;
-  color: #ffffff;
   font-weight: bold;
- 
   border: 0;
   border-top-right-radius: 1.1rem;
   border-bottom-right-radius: 1.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  
- 
- 
+  transition: background-color 1s;
+
 }
+.search-button:hover{
+
+  background-color:#42420e;
+}
+.search-button span{
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.search-results{
+  background-color: #fcfcfc;
+  border: 1px solid #6666;
+  border-radius: 5px;
+  width: 40rem;
+  color: #000000;
+  display: none;
+  padding: 1rem;
+  position: absolute;
+  z-index: 200;
+  left: 20%;
+
+  top: 5rem;
+
+
+
+
+}
+#search-results-list{
+  color:#000000;
+}
+
+#search-results-list a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 1s;
+}
+#search-results-list a:hover{
+  color: rgb(104, 104, 202);
+}
+
 .Nav-Link-cont{
   display: flex;
   align-items: center;
   justify-content:space-evenly;
+ 
 
 }
 
-.Nav-Links ,a{
+.Nav-links a ,.Nav-Link-cont a{
   color:#ffffff;
   font-size: 1.3rem;
   text-decoration: none;
-  margin-left: 0.9rem;
+  margin-left: 1.7rem;
   font-weight:300;
 }
-.Nav-Links ,a:hover{
+.Nav-links a:hover , .Nav-Link-cont a:hover{
   color: #666666;
 }
 .BookMarks{
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 
-/* .BookMarks span{
-  color: #ffffff;
-} */
+
 .Get-Started{
   margin-left: 0.9rem;
  
   
 }
-.Get-Started button,.Get-Started1 button {
-  padding: 0.3rem 1.7rem;
+.Get-Started button{
+  padding: 0.1rem 1.3rem;
   background-color:#666600;
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 500;
   border: 0;
   border-radius: 0.5rem;
   white-space: nowrap;
+  transition: color 1s;
+  transition: background-color 1s;
+  
+
+}
+.Get-Started1 button {
+  padding: 0.4rem 2rem;
+  background-color:#666600;
+  color: #ffffff;
+  font-weight: 500;
+  border: 0;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  transition: color 1s;
+  transition: background-color 1s;
 
 }
 .Get-Started button:hover,.Get-Started1 button:hover{
   color:#000000;
+  background-color: #a3a355;
 }
 /* Tag Line Styles */
 .TagLine-cont{
@@ -166,7 +232,11 @@ body{
 }
 .TagLine-Texts h1{
   font-style: italic;
-  font-size: 2.9rem;
+  font-size: 2.5rem;
+  box-shadow: 1px 1px 1px 1px rgba(193, 230, 123, 0.1);
+  width: fit-content;
+  padding: 0.3rem;
+  transition: all .2s ease-in-out;
 }
  .Get-Started1{
   margin-top: 2rem;
@@ -221,6 +291,7 @@ body{
   width: fit-content;
   box-shadow: 2px 2px 1px 2px rgba(153, 135, 135, 0.1);
 }
+
 .TP-counter{
   
   padding:0 0.6rem ;
@@ -234,6 +305,10 @@ body{
 width: 450px;
 padding: 0 0.4rem;
 cursor: pointer;
+
+}
+.TP-Title h3:hover{
+  color: #6666;
 }
 
 .TP-Title h3{
@@ -241,17 +316,20 @@ cursor: pointer;
   color: #000000;
   font-weight: 700;
   width:100%;
+  transition: color 1s;
 
 }
 .TP-visuals{
   width:8rem;
   padding: 0.4rem;
-  /* box-shadow: 2px 2px 2px 2px rgba(153, 135, 135, 0.5); */
+
 }
 .TP-visuals img{
   width: 100%;
   border-radius:0.3rem;
   cursor: pointer;
+  height: 4.4rem;
+
   
 }
 
@@ -277,57 +355,67 @@ cursor: pointer;
 .Recent-Posts-Cont{
   display:grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 50px;
+  row-gap: 45px;
   column-gap: 3%;
+  padding-left:2.2rem ;
+  
+
 }
  .Recent-Post{
   border-bottom: 1px solid lightgray;
 
- 
 
+  width: 36.5dvw;
+  height:100%;
 
 } 
-.RP-visual, .RP-Title , .RP-excerpt{
-  width: 36dvw;
-
+.RP-visual,.RP-Title{
+  width: 36.3dvw;
  
+}
+.RP-Title{
+  width: 36.3dvw;
+  height:70px;
 
- 
-
-  
- 
 }
 .RP-visual img{
   width: 100%;
   height: 23rem;
   object-fit:fill;
-  cursor: pointer;
   box-shadow: 2px 2px 2px 2px rgba(153, 135, 135, 0.3);
   
 }
 
 
 
+
 .RP-Title h2{
   color: #000000;
   cursor: pointer;
-  width: 100%;
-  font-size: 1.38rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0;
-
+  /* white-space: nowrap; */
+  cursor: pointer;
+  transition: color 1s;
 
   
 }
+.RP-Title h2:hover{
+  color:#6666;
+}
   .RP-excerpt{
-  width: 32dvw;
+  width: 36.2dvw;
+  height: 112px;
+
+
 
 }  
 .RP-excerpt p{
   color:#000000;
   width:100%;
-  cursor: pointer;
   margin-bottom: 0;
+
 
 }
 
@@ -335,7 +423,7 @@ cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 34.5dvw;
+  width: 36dvw;
 
   
 }
@@ -367,12 +455,13 @@ cursor: pointer;
   align-items: center;
   justify-content: space-between;
   margin-top: 0;
+  width: 36dvw;
 }
 .comments{
   display: flex;
   text-align: center;
   text-align: center;
-  font-family: 'ClashDisplay';
+ 
 }
 
 .comments span{
@@ -389,6 +478,7 @@ cursor: pointer;
    1s;
    padding: 0;
    margin-left:0.55rem;
+   transition: color 1s;
 }
 #Like:hover{
   color: rgb(218, 126, 126);
@@ -431,6 +521,7 @@ cursor: pointer;
   font-size: 2rem;
   font-weight: 300;
   color: #ffffff;
+  width: fit-content;
 }
 .Footers-links{
   display: flex;
@@ -442,6 +533,7 @@ cursor: pointer;
   padding: 0.5rem;
   font-weight: 500;
   transition: color 1s;
+  text-decoration: none;
  
 
 }
@@ -461,10 +553,12 @@ cursor: pointer;
   border: 1px solid #ffffff;
   margin-left:3px;
   border-radius: 50%;
+  padding: 0.3rem;
 }
 .F-icon img{
-  width: 3dvw;
+  width:2.5rem;
   cursor: pointer;
+  object-fit: fill;
 }
 .Footer-cont h5{
   color: #ffffff;
@@ -525,8 +619,12 @@ cursor: pointer;
 }
 
 .cs{
-  color: red;
+  color:#000000;
+  transition: color 1s;
  
+}
+.cs:hover{
+  color:#a0a0c5;
 }
 .comment-section{
   display: none;
@@ -539,7 +637,6 @@ cursor: pointer;
 .comment-section input::placeholder{
   text-align: center;
 }
-
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;}
@@ -684,6 +781,12 @@ cursor: pointer;
 
 /* Mobile */
 @media only screen and (max-width: 599px) {
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
   .Header{
     display: flex;
     background-color:#001900;
@@ -696,39 +799,55 @@ cursor: pointer;
     z-index: 100;  
     border-bottom: 1px solid #ffffff;
     width:100dvw;
-    
   
-
+ 
      
   }
-  .Logo, h2{
-    font-size: 1.5em;
+
+  .Nav-Link-cont{
+    align-items: center;
+  
+  }
+
+  .TagLine-Texts{
+    margin-left: 1rem;
+    width: 100%;
+  padding: 0;
+  
+  }
+  .logo h2{
+    font-size: 1em;
     text-decoration: none;
     color: #ffffff;
-    
-    
+   
    }
+   .TagLine-Texts h1  h3 {
+    color: #ffffff;
+    font-weight:400;
+    font-size: 0.8rem;
+   
+  }
+  .TagLine-Texts h1{
+    font-style: italic;
+    font-size: 1rem;
+    box-shadow: 1px 1px 1px 1px rgba(193, 230, 123, 0.1);
+    width: fit-content;
+    padding: 0.3rem;
+    transition: all .2s ease-in-out;
+  }
+
    .RP-visual, .RP-Title , .RP-excerpt{
-    width: 90dvw;
-    padding: 2rem;
+    width: 100%;
+    padding: 1rem;
     
    
   }
     
-   .Get-Started button{
-    padding: 0.1rem 1rem;
-    background-color:#666600;
-    color: #ffffff;
-    font-weight: bold;
-    border: 0;
-    border-radius: 0.5rem;
-    white-space: nowrap;
-    font-size: 1rem;
-  
-  }
+
 
   .Get-Started1{
     display: none;
+    margin-left: 0;
   }
   
   .search-bar{
@@ -738,35 +857,44 @@ cursor: pointer;
   .Nav-links a{
     display: none; 
   }
-  /* .Get-Started{
-    margin-right: 0.9rem;
-    padding-right: 1rem;
-    
-  }
-   */
-   .Get-Started button{
-    padding: 0.3rem 1rem;
+ 
+   .Get-Started button ,.Get-Started1 button{
+    padding: 0.1rem 0.5rem;
     background-color:#666600;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 500;
     border: 0;
     border-radius: 0.5rem;
     white-space: nowrap;
+    font-size: 0.9rem;
 
   
+  }
+  .TagLine-cont{
+    padding-bottom: 1rem;
   }
 
 
   .TagLine-img img {
-   
-    width: 100%;
+   width: 100%;
 }
 .TagLine-Texts h1,h3{
   width: 100%;
   font-size: 1.2em;
 }
 .TagLine-cont{
-  padding-top: 6.5rem;
+  padding-top: 6rem;
+}
+
+.TPH-Text h2{
+  color:#000000;
+  font-size:1.2em;
+
+}
+
+.TP-counter{
+  
+  padding:0 0.6rem ;
 }
 
 
@@ -774,17 +902,64 @@ cursor: pointer;
 
   display: grid;
   grid-template-columns: 1fr ;
-row-gap: 5px;
-/* display: flex;
-flex-direction: column;
-justify-content:center;
-align-items: center; */
+row-gap: 8px;
+width:100dvw;
 
   
 }
 
+.TP-counter{
+  
+  padding:0 0.4rem ;
+}
+.TP-counter h1 {
+  font-weight:700;
+  font-style: italic;
+  color: #666666;
+  font-size: 1.3rem;
+}
+
+.TP-Title{
+  width: 600px;
+  padding: 0 0.2rem;
+  cursor: pointer;
+  
+  }
+  .TP-Title h3:hover{
+    color: #6666;
+  }
+  
+  .TP-Title h3{
+    font-size: 1rem;
+    color: #000000;
+    font-weight:600;
+    width:100%;
+    transition: color 1s;
+  
+  }
+
+  .TP-visuals img{
+    width: 100%;
+    border-radius:0.3rem;
+    cursor: pointer;
+    height: 6rem;
+  
+    
+  }
+
+
+.Trendings-Posts{
+  display: flex;
+  align-items: center;
+  border:1px solid #6666;
+  border-radius: 0.2rem;
+  max-width: min-content;
+  box-shadow: 2px 2px 1px 2px rgba(153, 135, 135, 0.1);
+
+}
+
 .TP-Title {
-  width:48dvw;
+  width:50dvw;
   
 }
 .TP-visuals{
@@ -792,46 +967,111 @@ align-items: center; */
   
 }
 
+.RP-Title h2{
+  color: #000000;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  /* white-space: nowrap; */
+  cursor: pointer;
+  transition: color 1s;
+
+  
+}
+
+
 .Recent-Posts-Cont{
-  /* display:grid;
-  grid-template-columns: 1fr ;
-  column-gap: 3%; */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+ padding: 0;
+
 }
 
-.R-P-Author p{
-white-space: nowrap;
-margin-right:0.8em;
+.RP-visual img{
+  width: 100%;
+  height: 23rem;
+  object-fit:cover;
+  box-shadow: 2px 2px 2px 2px rgba(153, 135, 135, 0.3);
   
 }
 
 
+.Recent-Post{
+  border-bottom: 1px solid lightgray;
 
+
+  width:100%;
+  height:100%;
+
+
+} 
+
+.R-P-icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+  width: 100%;
+}
+
+.RP-visual,.RP-Title{
+  width:100%;
+}
+
+.RP-visual img{
+  width: 100%;
+  height: 23rem;
+  object-fit:cover;
+  box-shadow: 2px 2px 2px 2px rgba(153, 135, 135, 0.3);
+  
+}
+
+.R-P-Author{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.R-P-Author p{
+white-space: nowrap;
+
+  
+}
+
+
+.Footer-cont h2{
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ffffff;
+  width: fit-content;
+}
 .Footers-links a{
   padding: 0;
   white-space: nowrap;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-left: 0.5rem;
 }
 
 .F-icon{
   border: 1px solid #ffffff;
   margin-left:3px;
   border-radius: 50%;
+  padding: 0;
 }
 .F-icon img{
-  width: 2dvw;
+  width:7dvw;
   cursor: pointer;
   height:1.5rem;
 }
-.Footer-cont h2{
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #ffffff;
-}
+
 
 
 

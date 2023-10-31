@@ -52,6 +52,7 @@ span{
   font-size: 1.2rem;
   font-style: italic;
   font-weight: 500;
+
 }
 
 .apply-button {
@@ -73,8 +74,8 @@ span{
 #sign-up-button , #sign-in-button{
   width: 48%;
   padding: 10px;
-  background-color: #061b06;
-  color: #ffffff;
+  background-color: #b8ccb8;
+  color: #666666;
   border: none;
   border-radius: 0.24rem;
   cursor: pointer;
@@ -83,10 +84,10 @@ span{
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #apply-form{
-  visibility: hidden; /* Hidden by default. Visible on click */
+  visibility: hidden; 
   width: 450px;
   margin-left: -125px; 
-  background-color:#666600;
+  background-color:#38540b;
   color: #ffffff;
   text-align: center;
   border-radius: 2px; 
@@ -102,34 +103,19 @@ span{
 #apply-form.show{
   visibility: visible; 
 
-  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+
+   animation: fadein 0.4s;
 
 
 }
 
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-  from {top: 0; opacity: 0;}
-  to {top: 14rem; opacity: 1;}
-}
 
 @keyframes fadein {
   from {top: 0; opacity: 0;}
   to {top: 14rem; opacity: 1;}
 }
 
-@-webkit-keyframes fadeout {
-  from {top: 14rem; opacity: 1;}
-  to {top: 0; opacity: 0;}
-}
 
-@keyframes fadeout {
-  from {top: 14rem; opacity: 1;}
-  to {top: 0; opacity: 0;}
-}
 
 .Gt-logo a{
   text-decoration: none;
@@ -144,10 +130,10 @@ span{
   right:10px;
   top: 10px;
   font-size: 1.3rem;
-  color:#001900;
+  color:#ffffff;
   font-weight: 700;
   cursor: pointer;
-  border: 1px solid #000000;
+  border: 1px solid #032703;
   border-radius: 50%;
  
 }
