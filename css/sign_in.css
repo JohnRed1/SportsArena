@@ -17,50 +17,98 @@
 
 body {
    background-color:#ffffff; 
-  text-align: center;
 
   
   
 }
-.container {
-  margin: 120px auto;
+.main{
+  display:grid;
+  height: 100dvh;
+  grid-template-columns: 500px repeat(1, 1fr);
 
-  max-width: 600px;
+}
+.Visuals{
+  padding: 1.5rem;
+
+  background: linear-gradient(to bottom, #001900, #070803cb);
+
+
+  
+}
+.sign-in-cont{
+  padding: 1rem;
+   display: flex;
+   align-items:center;
+   background: radial-gradient(circle, #001900, #666600);
+   justify-content: center;
+
+
+}
+.logo a{
+  text-decoration: none;
+}
+
+.logo h2{
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fcfcfc;
+  text-transform: uppercase;
+   letter-spacing: 5px;
+   font-weight: bold;
+   text-shadow: 1px 2px 1px #8cb617;
+
+ }
+ .logo h2:hover {
+   animation: shake 0.5s linear infinite;
+ }
+ @keyframes shake {
+   0% { transform: translateX(0); }
+   25% { transform: translateX(-5px) rotate(2deg); }
+   50% { transform: translateX(5px) rotate(-2deg); }
+   75% { transform: translateX(-5px) rotate(2deg); }
+   100% { transform: translateX(5px) rotate(-2deg); }
+ }
+ .Graphics{
+  height: 85dvh;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  
+ }
+ .Graphics img{
+  width:100%;
+
+
+ 
+
+
+ }
+.sign-in {
+  width:40dvw;
   background-color: #fcfcfc;
-  padding:3rem;
   border-radius: 0.6rem;
   box-shadow:0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  
  
 }
-.Gt-logo a{
+.Gt-logo h2{
   text-decoration: none;
   color: #001900;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
 
 
-}
-.toggle-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top:1rem;
-  
-  
 }
 
 #signup-form{
-  margin-top: 3rem;
+  margin-top:3rem;
 }
-
-/* #toggle-sign-in{
-  margin-right: 0.2rem;
-  background-color:lightgrey;
-  padding: 0.8rem;
-  cursor: pointer; 
-
-} */
 
 .form-group {
   margin-bottom: 1.3rem;
+  margin-top: 2rem;
 }
 
 form p{
@@ -78,28 +126,47 @@ form p{
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+.sign-in-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  flex-direction: column;
+  padding-top: 1rem;
+}
  #sign-in-button{
-  width: 48%;
+  width: 49%;
   padding: 10px;
-  background-color: #000000;
+  background-color: #001900;
   color: #ffffff;
   border: none;
   border-radius: 0.24rem;
   cursor: pointer;
+  transition: opacity 1s;
 
 }
+#sign-in-button:hover{
+  opacity: .8;
+}
+
 
 .Forget-password{
   margin-top: 0.9rem;
   cursor: pointer;
+  transition: color 1s;
 }
+.Forget-password:hover{
+  color: #5f64ce;
+
+}
+
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #empty-field-alert{
-  visibility: hidden; /* Hidden by default. Visible on click */
+  visibility: hidden; 
   min-width: 250px;
   margin-left: -125px; 
-  background-color: #001900; 
+  background-color: #1b582d; 
   color: #fcfcfc;
   text-align: center;
   border-radius: 2px; 
@@ -114,9 +181,6 @@ form p{
 /* Show the snackbar when clicking on a button */
 #empty-field-alert.show {
   visibility: visible; 
-
-  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }

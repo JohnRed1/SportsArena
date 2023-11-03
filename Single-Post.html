@@ -166,7 +166,7 @@
             </div>
 
             <div class="SP-Author">
-              <a href="Author's-Page.html">
+              <a href="Author's-Page.html" >
                 <p id="Author-Name" class="TrendAuthor-Name">John Red</p>
               </a>
               <p id="Post-Time">1 Sep 2023</p>
@@ -265,6 +265,7 @@
     <script src="js/bootstrap.bundle.js"></script>
     <script>
       let sportsDb = JSON.parse(localStorage.getItem("sportsData"));
+      let News =JSON.parse(localStorage.getItem("latest"));;
 
       //for recent post
       const urlP = new URLSearchParams(window.location.search);
@@ -280,6 +281,7 @@
         // Set the href attribute for the selected element
         authorName.href = `Author's-Page.html?q=${singlePost.id}`;
         console.log(authorName.href);
+        
       }
 
       title.innerText = singlePost.title;
@@ -289,20 +291,51 @@
       content.innerText = singlePost.content;
 
       // for trending post
+      // const urlT = new URLSearchParams(window.location.search);
+      // const idT = urlT.get("a");
+      // let singleTrendPost = News.filter((a) => a.id == idT)[0];
+
+      // const titleTrend = document.querySelector(".TP-Title");
+      // const visualTrend = document.querySelector(".Trend-Visual");
+      // const authorNameTrend = document.querySelector(".TrendAuthor-Name");
+      // const contentTrend = document.querySelector(".TP-Content");
+
+      // titleTrend.innerText = singleTrendPost.title;
+      // authorNameTrend.innerText = singleTrendPost.author;
+
+      // visualTrend.innerHTML = ` <img src="${singleTrendPost.img}" alt="" />`;
+      // contentTrend.innerText = singleTrendPost.content;
+
       const urlT = new URLSearchParams(window.location.search);
-      const idT = urlT.get("a");
-      let singleTrendPost = sportsDb.filter((a) => a.id == idT)[0];
+const idT = urlT.get("a");
 
-      const titleTrend = document.querySelector(".TP-Title");
-      const visualTrend = document.querySelector(".Trend-Visual");
-      const authorNameTrend = document.querySelector(".TrendAuthor-Name");
-      const contentTrend = document.querySelector(".TP-Content");
+if (idT === "a" || idT === "b") {
+  let singleTrendPost = News.filter((a) => a.id == idT)[0];
 
-      titleTrend.innerText = singleTrendPost.title;
-      authorNameTrend.innerText = singleTrendPost.author;
+  const titleTrend = document.querySelector(".TP-Title");
+  const visualTrend = document.querySelector(".Trend-Visual");
+  const authorNameTrend = document.querySelector(".TrendAuthor-Name");
+  const contentTrend = document.querySelector(".TP-Content");
 
-      visualTrend.innerHTML = ` <img src="${singleTrendPost.img}" alt="" />`;
-      contentTrend.innerText = singleTrendPost.content;
+  titleTrend.innerText = singleTrendPost.title;
+  authorNameTrend.innerText = singleTrendPost.author;
+
+  visualTrend.innerHTML = ` <img src="${singleTrendPost.img}" alt="" />`;
+  contentTrend.innerText = singleTrendPost.content;
+}
+
+
+      
+
+
+
+
+
+
+
+
+
+
     </script>
 
     <script>
@@ -379,5 +412,6 @@
         username.innerText = userDb.username;
       }
     </script>
+
   </body>
 </html>

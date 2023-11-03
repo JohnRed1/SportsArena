@@ -57,7 +57,7 @@
           </p>
         </div>
       </div>
-      <div class="container pb-5">
+      <div class="container  pb-5">
         <div class="Profile-body">
           <div class="About">
             <div class="Profile-pic">
@@ -65,7 +65,7 @@
             </div>
             <div class="users-name">
               <a href="Profile-Page.html">
-                <h3 id="users-name">John Red</h3>
+                <h3 id="user-name">John Red</h3>
               </a>
             </div>
           </div>
@@ -91,88 +91,11 @@
             </p>
           </div>
           <div class="other-post-cont">
-            <div class="other-posts">
-              <div class="other-posts-pic">
-                <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-              </div>
-              <div class="other-posts-texts">
-                <h2>
-                  Turkey's summer spending spree: 'They've gone crazy. I'm not
-                  sure where they found the money'
-                </h2>
-                <p>
-                  After business labelled "unsustainable", a look at how
-                  Turkey's clubs bought so lavishly in the most recent transfer
-                  window
-                </p>
-              </div>
-            </div>
-            <div class="other-posts">
-              <div class="other-posts-pic">
-                <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-              </div>
-              <div class="other-posts-texts">
-                <h2>
-                  Turkey's summer spending spree: 'They've gone crazy. I'm not
-                  sure where they found the money'
-                </h2>
-                <p>
-                  After business labelled "unsustainable", a look at how
-                  Turkey's clubs bought so lavishly in the most recent transfer
-                  window
-                </p>
-              </div>
-            </div>
-            <div class="other-posts">
-              <div class="other-posts-pic">
-                <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-              </div>
-              <div class="other-posts-texts">
-                <h2>
-                  Turkey's summer spending spree: 'They've gone crazy. I'm not
-                  sure where they found the money'
-                </h2>
-                <p>
-                  After business labelled "unsustainable", a look at how
-                  Turkey's clubs bought so lavishly in the most recent transfer
-                  window
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
         <div class="More-posts">
-          <div class="other-posts">
-            <div class="other-posts-pic">
-              <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-            </div>
-            <div class="other-posts-texts">
-              <h2>
-                Turkey's summer spending spree: 'They've gone crazy. I'm not
-                sure where they found the money'
-              </h2>
-              <p>
-                After business labelled "unsustainable", a look at how Turkey's
-                clubs bought so lavishly in the most recent transfer window
-              </p>
-            </div>
-          </div>
-          <div class="other-posts">
-            <div class="other-posts-pic">
-              <img src="./images/02_Turkey_Money-1024x683.webp" alt="" />
-            </div>
-            <div class="other-posts-texts">
-              <h2>
-                Turkey's summer spending spree: 'They've gone crazy. I'm not
-                sure where they found the money'
-              </h2>
-              <p>
-                After business labelled "unsustainable", a look at how Turkey's
-                clubs bought so lavishly in the most recent transfer window
-              </p>
-            </div>
-          </div>
+     
           
             </div>
           
@@ -180,8 +103,18 @@
        
           
         </div>
-      </div>
-    </div>
+   
+
+
+
+
+
+
+
+
+
+
+
     <div class="Footer-cont p-3">
       <h2>SportsArena</h2>
       <div class="Footers-links pb-2">
@@ -234,12 +167,19 @@
 
 
   let sportsDb = JSON.parse(localStorage.getItem('sportsData'));
+  let News =JSON.parse(localStorage.getItem("latest"));
+  let maxOther = 6;
+  let maxMore = 7;
+  let otherPostCont = document.querySelector('.other-post-cont') ;
+  let morePostCont = document.querySelector('.More-posts');
+
+
 
   const urlA = new URLSearchParams(window.location.search);
   const id = urlA.get('a');
   let postAuthor = sportsDb.filter((a)=> a.id == id)[0];
 
-  const authorName = document.getElementById('users-name');
+  const authorName = document.getElementById('user-name');
   authorName.innerText = postAuthor.author;
   const heroImg = document.getElementById('Hero-Img');
   heroImg.src = postAuthor.img;
@@ -247,6 +187,51 @@
   heroTitle.innerText = postAuthor.title;
   const heroExcerpt = document.getElementById('Hero-excerpt');
   heroExcerpt.innerText = postAuthor.content.split(/[.!?]/).slice(0, 1).join(".");
+  
+
+  for(let i = 0; i < maxOther && i < News.length; i++){
+    let otherPosts = News[i];
+    let otherPost = `<div class="other-posts">
+              <div class="other-posts-pic">
+                <img src='${otherPosts.img}'alt="" />
+              </div>
+              <div class="other-posts-texts">
+                <h2 
+                data-news = ${otherPosts.id}>
+                 ${otherPosts.title}
+                </h2>
+              </div>
+            </div>`;
+            otherPostCont.innerHTML += otherPost;
+  }
+
+  let otherNews = document.querySelectorAll(".other-posts-texts");
+      otherNews.forEach((otherNew) => {
+        otherNew.addEventListener("click", function () {
+          let currentNew = this.getAttribute("data-news");
+      
+          window.location.href = "Single-Post.html?a=" + currentNew;
+        });
+      });
+
+      for(let i = 0; i < maxMore && i < sportsDb.length; i++){
+        let morePosts = sportsDb[i];
+        let morePost = ` <div class="other-posts">
+            <div class="other-posts-pic">
+              <img src='${morePosts.img}' alt="" />
+            </div>
+            <div class="other-posts-texts">
+              <h2>
+               ${morePosts.title}
+              </h2>
+              <p>
+                ${morePosts.content.split(/[.!?]/).slice(0, 1).join(".")}
+              </p>
+            </div>
+          </div>
+          `;
+          morePostCont.innerHTML += morePost;     
+         }
 
 
 
@@ -254,18 +239,6 @@
 
 
 
-  // const urlQ = new URLSearchParams(window.location.search);
-  // const idQ = urlQ.get('q');
-  // let aPost = sportsDb.filter((a)=> a.id == idQ)[0];
-
-  // const authorName = document.getElementById('users-name');
-  // authorName.innerText = aPost.author;
-  // const heroImg = document.getElementById('Hero-Img');
-  // heroImg.src = aPost.img;
-  // const heroTitle = document.getElementById('Hero-title');
-  // heroTitle.innerText = aPost.title;
-  // const heroExcerpt = document.getElementById('Hero-excerpt');
-  // heroExcerpt.innerText = aPost.content.split(/[.!?]/).slice(0, 1).join(".");
 
 
 

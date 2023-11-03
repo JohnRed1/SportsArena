@@ -41,13 +41,27 @@
   }
  
   .logo h2{
-   font-size: 2.2em;
-   text-decoration: none;
-   color: #ffffff;
- 
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #fcfcfc;
+    text-transform: uppercase;
+     letter-spacing: 5px;
+     font-weight: bold;
+     text-shadow: 1px 2px 1px #8cb617;
    
-   
-  }
+    
+    
+   }
+   .logo h2:hover {
+     animation: shake 0.5s linear infinite;
+   }
+   @keyframes shake {
+     0% { transform: translateX(0); }
+     25% { transform: translateX(-5px) rotate(2deg); }
+     50% { transform: translateX(5px) rotate(-2deg); }
+     75% { transform: translateX(-5px) rotate(2deg); }
+     100% { transform: translateX(5px) rotate(-2deg); }
+   }
   .search-bar{
     margin-left:1rem;
     display: flex;
@@ -55,12 +69,16 @@
     
   }
   .Searchbar {
-    padding: 0.38rem 8rem;
-    border-top-left-radius: 1.1rem;
-    border-bottom-left-radius: 1.1rem;
-    border: 0;
-    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.20);
-    outline:none;
+  padding-left:0.5rem;
+  width: 20rem;
+  height: 2.4rem;
+  border-top-left-radius: 1.1rem;
+  border-bottom-left-radius: 1.1rem;
+  border: 0;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.20);
+  outline:none;
+  text-align: start;
+
    
   
   
@@ -70,24 +88,36 @@
   .Searchbar::placeholder{
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
-    color: #000000;
-    text-align: center;
+    color: #6666;
+    text-align:center;
   }
   .search-button{
-    padding:0.41em 0.9em;
+    width: 3rem;
+    height: 2.44rem;
     background-color:#666600;
-    color: #ffffff;
     font-weight: bold;
-   
     border: 0;
     border-top-right-radius: 1.1rem;
     border-bottom-right-radius: 1.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-   
-   
+    transition: background-color 1s;
+    outline: none;
+  
+  }
+
+  .search-button:hover{
+
+    background-color:#9b9b2d;
+  
+  }
+  .search-button span{
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+  .search-button span:hover{
+    color: #000000;
   }
   .Nav-Link-cont{
     display: flex;
@@ -96,32 +126,42 @@
   
   }
   
-  .Nav-Links ,a{
+  .Nav-links a ,.Nav-Link-cont a{
     color:#ffffff;
     font-size: 1.3rem;
     text-decoration: none;
-    margin-left: 0.9rem;
+    margin-left: 0.7rem;
     font-weight:300;
+    transition: color 1s;
   }
-  .Nav-Links ,a:hover{
-    color: #666666;
+  .Nav-links a:hover , .Nav-Link-cont a:hover{
+    color: #d0d079;
   }
   .Get-Started{
     margin-left: 0.9rem;
     
   }
   .Get-Started button{
-    padding: 0.3rem 1.7rem;
-    background-color:#666600;
+    width: 9rem;
+    height: 2.5rem;
+    /* background-color:#666600; */
+    background-color: transparent;
+    border: 1px solid #fff;
     color: #ffffff;
-    font-weight: bold;
-    border: 0;
-    border-radius: 0.5rem;
+    font-weight: 500;
+    /* border: 0; */
+    border-radius: 0.2rem;
     white-space: nowrap;
+    transition: color 2s;
+    transition: background-color 1s;
+    transition: color 2s;
+    
   
   }
   .Get-Started button:hover{
     color:#000000;
+  
+    background-color: #666600;
   }
   .Single-post-cont{
     padding: 10rem 0rem;
@@ -175,10 +215,19 @@
     align-items: center;
 
   }
+  .SP-Author a{
+    text-decoration: none;
+  }
  #Author-Name{
     color: #000000;
     font-size: 1rem;
+    transition: color 1s;
+
   }
+  #Author-Name:hover{
+    color: #89b3e3;
+  }
+
   #Post-Time{
     margin-left:0.6rem;
     font-size: 0.7rem;
@@ -214,9 +263,14 @@
  
 }
 .Footer-cont h2{
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: #ffffff;
+  text-decoration: none;
+  color: #fcfcfc;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 1px 2px 1px #8cb617;
 }
 .Footers-links{
   display: flex;
@@ -228,11 +282,12 @@
   padding: 0.5rem;
   font-weight: 500;
   transition: color 1s;
+  text-decoration: none;
  
 
 }
 .Footers-links a:hover{
-  color: #666600;
+  color: #d0d079;
 
 }
 .Footers-icons{
@@ -243,20 +298,25 @@
 }
 
 
+
 .F-icon{
   border: 1px solid #ffffff;
   margin-left:3px;
   border-radius: 50%;
+  padding: 0.1rem;
+  margin-left: 8px;
 }
 .F-icon img{
-  width: 3dvw;
+  width:2.3rem;
   cursor: pointer;
+  object-fit: fill;
+  border-radius: 50%;
+  
 }
 .Footer-cont h5{
   color: #ffffff;
   font-size: 0.8rem;
 }
-
 
 
 .R-P-icons{
@@ -449,8 +509,13 @@
   font-size: 0.73rem;
   font-weight: 700;
   color: #000000;
-  
+  transition: color
+  1s;
 
+}
+
+.other-posts-texts h2:hover{
+  color: #89b3e3;
 }
 .other-posts-texts{
   padding: 0.3rem;

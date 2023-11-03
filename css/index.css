@@ -22,7 +22,6 @@
   padding: 0;
   margin: 0;
   font-family: 'Raleway', sans-serif;
-  /* font-family: 'ClashDisplay'; */
   border: none;
 
 
@@ -47,7 +46,8 @@ body{
   justify-content:space-between;
   position:fixed;
   left: 0;
-  right: 0;
+  right: 0; 
+
   top: 0;
   z-index: 100;  
   border-bottom: 1px solid #ffffff;
@@ -55,17 +55,41 @@ body{
   
 
 }
+#menu{
+  color: #ffffff;
+  display: none;
+  font-size: 1.5rem;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.Logo, h2{
- font-size: 2rem;
+}
+.logo h2{
+ font-size: 1.7rem;
  text-decoration: none;
  color: #fcfcfc;
- box-shadow: 1px 1px 1px 1px rgba(193, 230, 123, 0.1);
- transition: all .2s ease-in-out;
+ text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-shadow: 1px 2px 1px #8cb617;
 
  
  
 }
+.logo h2:hover {
+  animation: shake 0.5s linear infinite;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(2deg); }
+  50% { transform: translateX(5px) rotate(-2deg); }
+  75% { transform: translateX(-5px) rotate(2deg); }
+  100% { transform: translateX(5px) rotate(-2deg); }
+}
+
+
 .search-bar{
   margin-left:1rem;
   display: flex;
@@ -73,16 +97,15 @@ body{
   
 }
 .Searchbar {
-  padding: 0.37rem 8rem;
+ padding-left:0.5rem;
+  width: 20rem;
+  height: 2.4rem;
   border-top-left-radius: 1.1rem;
   border-bottom-left-radius: 1.1rem;
   border: 0;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.20);
   outline:none;
   text-align: start;
- 
-
-
 
  
 }
@@ -90,10 +113,11 @@ body{
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
   color: #6666;
-  text-align: center;
+  text-align:center;
 }
 .search-button{
-  padding:0.41em 0.9em;
+  width: 3rem;
+  height: 2.4rem;
   background-color:#666600;
   font-weight: bold;
   border: 0;
@@ -103,15 +127,20 @@ body{
   justify-content: center;
   align-items: center;
   transition: background-color 1s;
+  outline: none;
 
 }
 .search-button:hover{
 
-  background-color:#42420e;
+  background-color:#9b9b2d;
+
 }
 .search-button span{
   color: #ffffff;
   font-size: 1.5rem;
+}
+.search-button span:hover{
+  color: #000000;
 }
 
 .search-results{
@@ -159,11 +188,12 @@ body{
   color:#ffffff;
   font-size: 1.3rem;
   text-decoration: none;
-  margin-left: 1.7rem;
+  margin-left: 0.7rem;
   font-weight:300;
+  transition: color 1s;
 }
 .Nav-links a:hover , .Nav-Link-cont a:hover{
-  color: #666666;
+  color: #d0d079;
 }
 .BookMarks{
   display: flex;
@@ -176,37 +206,47 @@ body{
 
 .Get-Started{
   margin-left: 0.9rem;
- 
   
 }
 .Get-Started button{
-  padding: 0.1rem 1.3rem;
-  background-color:#666600;
+  width: 9rem;
+  height: 2.5rem;
+  /* background-color:#666600; */
+  background-color: transparent;
+  border: 1px solid #fff;
   color: #ffffff;
   font-weight: 500;
-  border: 0;
-  border-radius: 0.5rem;
+  /* border: 0; */
+  border-radius: 0.2rem;
   white-space: nowrap;
-  transition: color 1s;
+  transition: color 2s;
   transition: background-color 1s;
+  transition: color 2s;
   
 
 }
 .Get-Started1 button {
-  padding: 0.4rem 2rem;
-  background-color:#666600;
+  /* padding:0.5rem 2rem; */
   color: #ffffff;
+  width: 9rem;
+  height: 2.5rem;
+  /* background-color:#666600; */
+  background-color: transparent;
+  border: 1px solid #fff;
   font-weight: 500;
-  border: 0;
-  border-radius: 0.5rem;
+  /* border: 0; */
+  border-radius: 0.2rem;
   white-space: nowrap;
   transition: color 1s;
   transition: background-color 1s;
+  transition: color 1s;
+  font-size: 1.2rem;
 
 }
 .Get-Started button:hover,.Get-Started1 button:hover{
-  color:#000000;
-  background-color: #a3a355;
+  color:#ffffff;
+  /* background-color: #a3a355; */
+  background-color: #666600;
 }
 /* Tag Line Styles */
 .TagLine-cont{
@@ -233,7 +273,6 @@ body{
 .TagLine-Texts h1{
   font-style: italic;
   font-size: 2.5rem;
-  box-shadow: 1px 1px 1px 1px rgba(193, 230, 123, 0.1);
   width: fit-content;
   padding: 0.3rem;
   transition: all .2s ease-in-out;
@@ -261,10 +300,12 @@ body{
   display: flex;
   align-items: center;
 
+  padding-left: 1rem;
+
 }
 .TPH-Text h2{
   color:#000000;
-  font-size:1.5em;
+  font-size:1.3em;
 
 }
 .Trendings-cont{
@@ -274,22 +315,19 @@ body{
   grid-template-columns: 1fr 1fr;
   row-gap:3%;
 
-  /* grid-template-columns: repeat(auto-fit,39.2rem);
-  row-gap: 2%; */
-  
- 
-  
-
   
 
 }
 .Trendings-Posts{
   display: flex;
   align-items: center;
-  border:1px solid lightgrey;
+  border:1px solid #cecbcb66;
   border-radius: 0.2rem;
   width: fit-content;
-  box-shadow: 2px 2px 1px 2px rgba(153, 135, 135, 0.1);
+
+}
+.Trendings-Posts:hover{
+  box-shadow: 1px 1px 1px 1px rgba(153, 135, 135, 0.1);
 }
 
 .TP-counter{
@@ -300,6 +338,7 @@ body{
   font-weight:700;
   font-style: italic;
   color: #666666;
+  text-align: center;
 }
 .TP-Title{
 width: 450px;
@@ -308,7 +347,7 @@ cursor: pointer;
 
 }
 .TP-Title h3:hover{
-  color: #6666;
+  color:  #3b74a3;
 }
 
 .TP-Title h3{
@@ -354,35 +393,32 @@ cursor: pointer;
 
 .Recent-Posts-Cont{
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 45px;
-  column-gap: 3%;
-  padding-left:2.2rem ;
-  
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 1%;
+  padding-left:1rem ;
 
 }
  .Recent-Post{
-  border-bottom: 1px solid lightgray;
 
-
-  width: 36.5dvw;
+  width: 25.5dvw;
   height:100%;
 
 } 
-.RP-visual,.RP-Title{
-  width: 36.3dvw;
+.RP-visual{
+  width: 25.3dvw;
  
 }
 .RP-Title{
-  width: 36.3dvw;
+  width:25.3dvw;
   height:70px;
+ 
 
 }
 .RP-visual img{
   width: 100%;
-  height: 23rem;
+  height: 16rem;
   object-fit:fill;
-  box-shadow: 2px 2px 2px 2px rgba(153, 135, 135, 0.3);
   
 }
 
@@ -392,29 +428,28 @@ cursor: pointer;
 .RP-Title h2{
   color: #000000;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0;
-  /* white-space: nowrap; */
   cursor: pointer;
   transition: color 1s;
-
   
 }
 .RP-Title h2:hover{
-  color:#6666;
+  color:#3b74a3;
 }
   .RP-excerpt{
-  width: 36.2dvw;
-  height: 112px;
 
-
+  width: 25.2dvw;
+  height: 117px;
+ 
 
 }  
 .RP-excerpt p{
   color:#000000;
   width:100%;
   margin-bottom: 0;
+  font-size: 0.9rem;
 
 
 }
@@ -423,13 +458,15 @@ cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 36dvw;
+padding-top: 0.5rem;
+  width: 25dvw;
+ 
 
   
 }
 .R-P-Author p{
   color: #000000;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
   margin-top: 0;
@@ -447,7 +484,7 @@ cursor: pointer;
 
 }
 .Post-Category:hover , .R-P-Author p:hover{
-  color:#b4dbb4;
+  color:#3b74a3;
 }
 
 .R-P-icons{
@@ -455,17 +492,21 @@ cursor: pointer;
   align-items: center;
   justify-content: space-between;
   margin-top: 0;
-  width: 36dvw;
+  width: 25dvw;
+  
+}
+.R-P-icons p{
+text-align: center;
+margin-top: 13px;
 }
 .comments{
   display: flex;
   text-align: center;
-  text-align: center;
- 
+  align-items: center;
 }
 
 .comments span{
-  margin-left: 0.3rem;
+  margin-right: 0.35rem;
 }
 .material-symbols-outlined{
   color:#000000;
@@ -487,17 +528,11 @@ cursor: pointer;
 
 .bookmark:hover{
 
-  color:#666666;
+  color:#6e842cbd;
  
 
 }
 
-.bookmark:active{
-  background-color: #000000;
-  
-  border-radius: 50%;
-  
-  }
 
 .bookmark:active{
   color: #b62700;
@@ -514,14 +549,16 @@ cursor: pointer;
 .Footer-cont{
   border: 1px solid #666600;
   background-color: #001900;
-
- 
 }
 .Footer-cont h2{
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: #ffffff;
-  width: fit-content;
+  text-decoration: none;
+  color: #fcfcfc;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 1px 2px 1px #8cb617;
 }
 .Footers-links{
   display: flex;
@@ -538,7 +575,7 @@ cursor: pointer;
 
 }
 .Footers-links a:hover{
-  color: #666600;
+  color: #d0d079;
 
 }
 .Footers-icons{
@@ -553,12 +590,15 @@ cursor: pointer;
   border: 1px solid #ffffff;
   margin-left:3px;
   border-radius: 50%;
-  padding: 0.3rem;
+  padding: 0.1rem;
+  margin-left: 8px;
 }
 .F-icon img{
   width:2.5rem;
   cursor: pointer;
   object-fit: fill;
+  border-radius: 50%;
+  
 }
 .Footer-cont h5{
   color: #ffffff;
@@ -787,6 +827,10 @@ cursor: pointer;
     margin: 0;
   }
   
+  #menu{
+    display: flex;
+    font-size: 1rem;
+  }
   .Header{
     display: flex;
     background-color:#001900;
@@ -810,13 +854,20 @@ cursor: pointer;
   }
 
   .TagLine-Texts{
-    margin-left: 1rem;
-    width: 100%;
+    /* margin-left: 1rem; */
+    width: 100dvw;
   padding: 0;
   
   }
+  .TagLine-cont{
+    display:grid;
+    grid-template-columns: 1fr;
+  }
+  .TagLine-img{
+    width: 10rem;
+  }
   .logo h2{
-    font-size: 1em;
+    font-size: 0.6rem;
     text-decoration: none;
     color: #ffffff;
    
@@ -824,13 +875,12 @@ cursor: pointer;
    .TagLine-Texts h1  h3 {
     color: #ffffff;
     font-weight:400;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
    
   }
   .TagLine-Texts h1{
     font-style: italic;
     font-size: 1rem;
-    box-shadow: 1px 1px 1px 1px rgba(193, 230, 123, 0.1);
     width: fit-content;
     padding: 0.3rem;
     transition: all .2s ease-in-out;
@@ -848,6 +898,10 @@ cursor: pointer;
   .Get-Started1{
     display: none;
     margin-left: 0;
+  }
+
+  .Get-Started button{
+    display: none;
   }
   
   .search-bar{
@@ -871,7 +925,7 @@ cursor: pointer;
   
   }
   .TagLine-cont{
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
   }
 
 

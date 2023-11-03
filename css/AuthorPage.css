@@ -18,69 +18,120 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem;
-  border-bottom: 1px solid #666666;
+  padding: 1rem;
+  background-color:#001900;
+  position:fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;  
  
 
 }
-.logo a {
+.container{
+  padding-top: 5rem;
+} 
+.logo a{
   text-decoration: none;
-  color: #000000;
-  font-size: 1,3rem;
-  
 }
+.logo h2{
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #fcfcfc;
+  text-transform: uppercase;
+   letter-spacing: 5px;
+   font-weight: bold;
+   text-shadow: 1px 2px 1px #8cb617;
+   margin-right: 5px;
+ 
+  
+  
+ }
+ .logo h2:hover {
+   animation: shake 0.5s linear infinite;
+ }
+ @keyframes shake {
+   0% { transform: translateX(0); }
+   25% { transform: translateX(-5px) rotate(2deg); }
+   50% { transform: translateX(5px) rotate(-2deg); }
+   75% { transform: translateX(-5px) rotate(2deg); }
+   100% { transform: translateX(5px) rotate(-2deg); }
+ }
+ 
 .L-and-s , .Nav-Link-cont{
   display: flex;
   align-items: center;
  
 }
 
-.Search-bar{
+.search-bar{
   display: flex;
   align-items: center;
+  justify-content: center;
   
 }
 .Searchbar{
-  padding: 0.38rem 2rem;
+  padding-left:0.5rem;
+  width: 20rem;
+  height: 2.4rem;
   border-top-left-radius: 1.1rem;
   border-bottom-left-radius: 1.1rem;
   
-  border: 1px solid #666666;
+  border: 1px solid #6666;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.20);
   outline:none;
+  text-align: start;
  
 }
 .Searchbar::placeholder{
-  color: #000000;
+  color: #6666;
   font-size: 1rem;
   text-align: center;
 }
 .search-button{
-  padding: 0.38rem 1rem;
-  margin-left:-0.4rem;
-  border-left: 0;
+  width: 3rem;
+  height: 2.4rem;
   border-top-right-radius:1.1rem ;
   border-bottom-right-radius:1.1rem;
-  border: 1px solid #6666;
+  border: 0;
+  background-color:#666600;
+  transition: background-color 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
 }
 .search-button span{
-  font-size: 1.1rem;
-  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.search-button:hover{
+
+  background-color:#9b9b2d;
+
+}
+.search-button span:hover{
+  color: #000000;
 }
 
 .Nav-Link-cont a{
-  text-decoration: none;
-  margin-left: 1rem;
-  color: #000000;
+  color:#ffffff;
   font-size: 1.3rem;
+  text-decoration: none;
+  margin-left: 0.7rem;
+  font-weight:300;
+  transition: color 1s;
 
+}
+.Nav-links a:hover , .Nav-Link-cont a:hover{
+  color: #d0d079;
 }
 
 .Profile-body{
   display: flex;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #e4dada;
 }
 .About{
   display: flex;
@@ -90,7 +141,7 @@ body{
 
 .Profile-pic{
 
-  padding: 1rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 .Profile-pic img{
@@ -99,9 +150,9 @@ body{
 }
 
 .users-name{
-  padding: 1rem;
+  padding: 0.5rem;
   
-  border-right: 1px solid #666666;
+  border-right: 1px solid #e4dada;
 }
 .users-name a{
   text-decoration: none;
@@ -111,7 +162,12 @@ body{
   white-space: nowrap;
   font-size: 1.5rem;
   font-weight: 700;
+  
 }
+#users-name:hover{
+  color:#79a3d0 
+}
+
 .User-bio{
   padding-left: 1rem;
   
@@ -151,8 +207,8 @@ body{
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content:start;
   padding-top: 0;
 }
 .other-posts h2{
@@ -163,7 +219,7 @@ body{
   padding-left: 0.5rem;
 }
 .Hero-post{
-  border-right: 1px solid #666666;
+  border-right: 1px solid #e4dada;
   padding: 1.1rem;
   width: 41rem;
 
@@ -185,7 +241,7 @@ body{
 .other-posts{
   display: flex;
   padding: 0.5rem;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #e4dada;
   width: fit-content;
   margin-left: 0.3rem;
   justify-items: center;
@@ -199,13 +255,28 @@ body{
 }
 
 .other-posts-pic img{
-  width: 9rem;
+  width: 7rem;
+  height: 4rem;
   object-fit: cover;
 }
-
+.other-posts-texts{
+  width: 100%;
+  height:5rem;
+  align-items: center;
+  padding-top: 0.5rem;
+}
 .other-posts-texts h2{
   cursor: pointer;
+  color:#000000;
+  font-weight:500;
+  font-size: 1.2rem;
+  transition: color 1s;
+  
 }
+.other-posts-texts h2:hover{
+  color:#79a3d0 
+
+} 
 .More-posts{
   padding-top: 1rem;
   display: flex;
@@ -224,9 +295,14 @@ body{
  
 }
 .Footer-cont h2{
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: #ffffff;
+  text-decoration: none;
+  color: #fcfcfc;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 1px 2px 1px #8cb617;
 }
 .Footers-links{
   display: flex;
@@ -243,7 +319,7 @@ body{
 
 }
 .Footers-links a:hover{
-  color: #666600;
+  color: #d0d079;
 
 }
 .Footers-icons{
@@ -258,10 +334,15 @@ body{
   border: 1px solid #ffffff;
   margin-left:3px;
   border-radius: 50%;
+  padding: 0.1rem;
+  margin-left: 8px;
 }
 .F-icon img{
-  width: 3dvw;
+  width:2.5rem;
   cursor: pointer;
+  object-fit: fill;
+  border-radius: 50%;
+  
 }
 .Footer-cont h5{
   color: #ffffff;
@@ -269,26 +350,27 @@ body{
 }
 
 .red{
-  color:#000000;
+  color:#ffffff;
   font-size: 1.2rem;
 
 }
 .logout{
-  color: #b62700;
+  color: #ffffff;
   cursor: pointer;
   padding: 5px;
-  background-color: #ffffff;
-  border: none;
+  background-color: #001900;
+  border: 2px solid rgb(209, 199, 199);
 }
 .logout:hover{
-  color: #666600;
+ 
+  color: #b62700;
 }
 
 #So{
   display: none;
 }
 
-#users-name{
+#user-name{
   font-size: 1rem;
   color: #000000;
   font-weight: 300;
@@ -401,7 +483,7 @@ body{
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    border-bottom: 1px solid #666666;
+    border-bottom: 1px solid #6666;
     align-items: center;
     margin-left: 0.3rem;
     cursor: pointer;

@@ -10,14 +10,29 @@ const recentPost = document.querySelector(".RP-Title");
 let trendingPost = document.querySelectorAll(".TP-Title");
 let trendingPostVisual = document.querySelectorAll('.TP-visuals');
 let getStarted = document.querySelector(".Get-Started");
+let articles =document.getElementById('Articles');
+let likes = document.querySelectorAll('.like');
+
+
+
 
 let dataBase = JSON.parse(localStorage.getItem('database')) || [];
 
 
 
 
+articles.addEventListener('click',( )=> {
+  emptyFieldAlert('Under Maintenance');
 
+})
 
+likes.forEach((like) =>{
+  like.addEventListener('click',function(){
+    console.log('liked')
+    emptyFieldAlert('Under Maintenance');
+
+  })
+})
 
 
 
@@ -63,8 +78,7 @@ function signUp() {
     emptyFieldAlert("Please fill in all fields.");
     return;
   }
-  else
-  if (password !== confirmPassword) {
+  else if (password !== confirmPassword) {
     document.querySelector(".WarningP").innerHTML = "Passwords do not match.";
     setTimeout(function () {
       document.querySelector(".WarningP").innerHTML = "";
@@ -99,71 +113,57 @@ function signUp() {
 
   emptyFieldAlert("Sign up successful");
 
-  // console.log(dataBase);
+
+  localStorage.setItem('loggedIn', 'yes');
+        localStorage.setItem('activeuser', username);
 
    setTimeout(function () {
-     window.location.href = "Sign_in.html";
+     window.location.href = "index.html";
    }, 1500); // Redirect after 2 seconds (adjust the time as needed)
   }
 }
 
-// Sign in Scripts
+
 function signIn() {
-  
-  // event.preventDefault();
+ 
   const username = signInUsernameInput.value;
   let password = signInPasswordInput.value;
   const storedUserData = localStorage.getItem("database");
   const user = JSON.parse(storedUserData);
 
-  
+  if (!username || !password) {
+    emptyFieldAlert("Please fill in your login details");
+  } else if (storedUserData) {
+    let usernameFound = false;
 
-  if(!username || !password){
-    emptyFieldAlert("Please fill in your login details")
-  }
+    for (let i = 0; i < user.length; i++) {
+      if (username === user[i].username) {
+        usernameFound = true;
+        if (password === user[i].password) {
+          emptyFieldAlert("Sign In Successful");
+          localStorage.setItem('loggedIn', 'yes');
+          localStorage.setItem('activeuser', username);
 
-  else if(storedUserData){
+          setTimeout(function () {
+            window.location.href = "index.html";
+          }, 2000);
 
-    // Check if the entered password matches the stored password
-    for(let i = 0; i < user.length; i++ ) {
-
-      if (username === user[i].username && password === user[i].password) {
-        // alert("Sign-in successful!");
-        emptyFieldAlert("Sign In Successful");
-  
-        localStorage.setItem('loggedIn', 'yes');
-        localStorage.setItem('activeuser', username);
-        
-  
-        setTimeout(function () {
-          window.location.href = "index.html";
-        }, 2000); // Redirect after 2 seconds (adjust the time as needed)
-  
-        return true;
-      }
-       else if (username !== user[i].username ) {
-  
-        emptyFieldAlert("Username not found. Please sign up first.")
-       
-      }
-      else if (password !== user[i].password){
-  
-        emptyFieldAlert("Password Incorrect");
-  
-        if(password === ""){
-  
-          emptyFieldAlert("Please enter your password.")
-  
-  
+          return true;
+        } else {
+          emptyFieldAlert("Password Incorrect");
+          if (password === "") {
+            emptyFieldAlert("Please enter your password");
+          }
         }
       }
     }
-  }
-  
-  
- 
 
+    if (!usernameFound) {
+      emptyFieldAlert("Username not found. Please sign up first.");
+    }
   }
+}
+
 
 
 function redirectToSignUp() {

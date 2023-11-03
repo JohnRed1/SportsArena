@@ -5,42 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SportsArena/Sign_In</title>
   <link rel="stylesheet" href="css/sign_in.css">
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  
 </head>
 <body>
-  <div class="container">
-    <div class="Gt-logo">
-      <a href="./index.html">
+
+  <div class="main">
+    <div class="Visuals">
+
+      <div class="logo">
+        <a href="./index.html">
           <h2>SportsArena</h2>
-      </a>
-  </div>  
+        </a>
+      </div>
 
 
-    <div id="signin-form">
-      <form action="#" method="post">
-          <div class="form-group">
-              <label for="signin-username">Username</label>
-              <input type="text" id="signin-username" name="signin-username" required autocomplete="on">
-          </div>
-          <div class="form-group">
-              <label for="signin-password">Password</label>
-              <input type="password" id="signin-password" name="signin-password" required>
+      <div class="Graphics">
+        <img src="/images/Tagline1-removebg-preview.webp" alt="">
+      </div>
+
+     
+    
+
+    </div>
+    <div class="sign-in-cont">
+
+      <div class="sign-in">
+        <div class="Gt-logo">
+          <h2>Sign in</h2>
+      </div>  
+    
+    
+        <div id="signin-form">
+          <form action="#" method="post">
+              <div class="form-group">
+                  <label for="signin-username">Username</label>
+                  <input type="text" id="signin-username" name="signin-username" required autocomplete="on">
+              </div>
+              <div class="form-group">
+                  <label for="signin-password">Password</label>
+                  <input type="password" id="signin-password" name="signin-password" required>
+                 
+                  <!-- <p class="Forget-password">Forget password?</p> -->
+              </div>
+    
+              <div id="empty-field-alert">
+                <!-- Please fill in all fields. -->
+            </div>
+
+            <div class="sign-in-btn">
+              
+              <button type="button" id="sign-in-button" onclick="
+              signIn();">Sign In</button>
+            <p>Don't have an account yet? <span><a href="Get_started.html">Sign Up</a></span></p>
+            </div>
              
-              <p class="Forget-password">Forget password?</p>
-          </div>
+    
+          </form>
+      </div>
+    
+      </div>
+    </div>
 
-          <div id="empty-field-alert">
-            <!-- Please fill in all fields. -->
-        </div>
-         
-          <button type="button" id="sign-in-button" onclick="
-          signIn();">Sign In</button>
 
-        <p>Don't have an account yet? <span><a href="Get_started.html">Sign Up</a></span></p>
-      </form>
-  </div>
 
   </div>
 
+
+  
  
   <script src="js/SportsArena.js"></script>
 

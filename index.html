@@ -36,8 +36,13 @@
 
       <header>
         <div class="Header p-3 pe-4">
+          
           <div class="L-and-s">
+        
             <div class="logo">
+              <span class="material-symbols-outlined"id='menu'>
+                menu
+                </span>
               <h2>SportsArena</h2>
             </div>
           </div>
@@ -52,7 +57,8 @@
 
           <div class="Nav-Link-cont">
             <div class="Nav-links">
-              <a href="">Articles</a>
+              <a href="#" id="Articles">Articles</a>
+
               <a href="Write_for_us.html" id="Write">Write for us</a>
               <a href="Sign_in.html" target="_parent" class="sign-in"
                 >Sign In</a
@@ -70,6 +76,14 @@
           </div>
         </div>
       </header>
+
+      
+      <div class="search-results">
+        <ul id="search-results-list">
+          <!-- Results will be displayed here -->
+        
+        </ul>
+      </div>
 
       
       
@@ -134,12 +148,6 @@
         </div>
       </div>
 
-      <div class="search-results">
-        <ul id="search-results-list">
-          <!-- Results will be displayed here -->
-        
-        </ul>
-      </div>
 
 
       <!-- Recent Posts -->
@@ -248,9 +256,11 @@
       let storedSportsData = JSON.parse(localStorage.getItem("sportsData"));
       let recentPostCont = document.querySelector(".Recent-Posts-Cont");
       let trendingPostCont = document.querySelector(".Trendings-cont");
+      let News =JSON.parse(localStorage.getItem("latest"));
       let maxTrends = 8;
       
       let authorName = document.querySelectorAll(".Authors-name");
+     
       
      
       
@@ -268,8 +278,8 @@
       
       //  Trending post
       
-      for (let i = 0; i < maxTrends && i < storedSportsData.length; i++) {
-        let aTrendingPost = storedSportsData[i];
+      for (let i = 0; i < maxTrends && i < News.length; i++) {
+        let aTrendingPost = News[i];
         let trendingPost = `
       <div class="Trendings-Posts">
       <div class="TP-counter">
@@ -338,7 +348,7 @@
       <span class="material-symbols-outlined cs"
       data-comment = ${aRecentPost.id}
       > mode_comment </span><p>76</p>
-      <span class="material-symbols-outlined" id="Like">
+      <span class="material-symbols-outlined like" id="Like">
         favorite
       </span><p>5.6k</p>
       

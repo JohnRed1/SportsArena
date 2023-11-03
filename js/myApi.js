@@ -337,5 +337,267 @@ Brendan Rodgers side saw off Hearts in a comfortable 4-1 victory in front of the
 let sportsFeeds = JSON.stringify(sportsDb);
 localStorage.setItem("sportsData", sportsFeeds);
 
+let sportsDb2 = [
+  {
+    title:
+      "Liverpool boss Jurgen Klopp winces hilariously as he reacts to Man United's 3-0 Carabao Cup defeat against New",
+    img: "https://i.dailymail.co.uk/1s/2023/11/02/10/77314315-12701309-image-a-14_1698922559642.jpg",
+    author: "Luke Power",
+    category: "Football",
+    content: "",
+    id: 1,
+    
+    
+    
+  },
+  {
+    title:
+      "Declan Rice's nightmare West Ham return a result of Arsenal's complacency",
+    img: "https://static.independent.co.uk/2023/11/01/21/2023-11-01T211848Z_1907039468_UP1EJB11N7AS9_RTRMADP_3_SOCCER-ENGLAND-WHU-ARS-REPORT.JPG?quality=75&width=640&auto=webp",
+    author: "Jamie Braidwood",
+    category: "Football",
+    content: "",
+    id: 2,
+
+  },
+  {
+    title:
+      "Cricket World Cup 2023: Mitchell Marsh to return to Australia for personal reasons",
+    img: "https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/123F3/production/_131593747_gettyimages-1746307324.jpg",
+    author: "Matthew Henry",
+    category: "Cricket",
+    content: "",
+    id: 3,
+
+  },
+  {
+    title:
+      "World Series 2023: Texas Rangers beat Arizona Diamondbacks to clinch 4-1 Fall Classic win",
+    img: "https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/9E5B/production/_131593504_texas_rangers_getty.jpg",
+    author: "Mark Mitchener",
+    category: "Baseball",
+    content: "",
+    id: 4,
+
+  },
+  {
+    title:
+      "Everton and Liverpool handed home fixtures in Carabao Cup quarter-final draw",
+    img: "https://i2-prod.manchestereveningnews.co.uk/incoming/article28024983.ece/ALTERNATES/s810/0_GettyImages-1648877066-1.jpg",
+    author: "James Quinlan",
+    category: "Football",
+    content: "",
+    id: 5,
+
+  },
+  {
+    title:
+      "European football: Bayern Munich shocked by third-tier Saarbrücken",
+    img: "https://i.guim.co.uk/img/media/1a9e42aa2702b8783c726d5af43b124337e6bd86/0_70_3264_1958/master/3264.jpg?width=700&dpr=2&s=none",
+    author: "Simon Burnton",
+    category: "Football",
+    content: "",
+    id: 6,
+
+  },
+  {
+    title:
+      "Jaylon Johnson not interested in contract extension right now",
+    img: "https://nbcsports.brightspotcdn.com/dims4/default/5cef8c4/2147483647/strip/true/crop/7026x3952+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F24%2Fd4%2F7dba0c2f4faea0850888638a70cf%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1743311645",
+    author: "Josh Alper",
+    category: "American Football",
+    content: "",
+    id: 7,
+
+  },
+  {
+    title:
+      "Adam Johnson: Inquest to open into death of ice hockey player",
+    img: "https://ichef.bbci.co.uk/news/976/cpsprodpb/A199/production/_131596314_adamjohnson.jpg.webp",
+    author: "Laura Hammond",
+    category: "Ice Hockey",
+    content: "",
+    id: 8,
+
+  },
+  {
+    title:
+      "Sunderland boss Tony Mowbray outlines Leicester City plan but makes 'devastating' claim",
+    img: "https://i2-prod.stokesentinel.co.uk/incoming/article8846920.ece/ALTERNATES/s810/1_GettyImages-1688510255.jpg",
+    author: "Jordan Blackwell",
+    category: "Football",
+    content: "",
+    id: 9,
+
+  },
+  {
+    title:
+      "Martin Brundle on the United States GP: Lewis Hamilton disqualification shows need to tweak Sprint format",
+    img: "https://e0.365dm.com/23/10/768x432/skysports-motorsport-f1_6332008.jpg",
+    author: "Sky Sports",
+    category: "F1",
+    content: "",
+    id: 10,
+
+  },
+  {
+    title:
+      "Every word Mikel Arteta said on David Raya's Arsenal confidence, Bukayo Saka and Aaron Ramsdale",
+    img: "https://i2-prod.football.london/incoming/article27968970.ece/ALTERNATES/s810/0_Mikel-Arteta.jpg",
+    author: "Kaya Kaynak",
+    category: "Football",
+    content: "",
+    id: 11,
+
+  },
+  {
+    title:
+      "The Celtic anomaly Champions League rivals don't face as baffled Neil Lennon rinses Atletico Madrid oversigh",
+    img: "https://i2-prod.dailyrecord.co.uk/sport/football/football-news/article31262272.ece/ALTERNATES/s810/0_Screenshot-2023-10-23-at-193055.png",
+    author: "Mark Pirie",
+    category: "Football",
+    content: "",
+    id: 12,
+   
+  },
+  
+];
+sportsDb2[0].content = `Jurgen Klopp looked shell-shocked and winced when he heard that Manchester United had lost 3-0 to Newcastle in the Carabao Cup.
+
+The Liverpool boss was lost for words as he simply said 'ooh... okay' and cringed as somebody told him about United's latest Old Trafford meltdown. 
+
+Man United were well beaten by Newcastle's second string as goals from Miguel Almiron, Lewis Hall, and Joe Willock condemned them to their eighth defeat of the campaign.Their record of eight losses in 15 games means it is their worst start to a season since 1962/63, when they finished 19th in the First Division but won the FA Cup. 
+
+Pressure is mounting on Erik ten Hag after a run of four defeats in seven games, all of them on their own turf. Liverpool, by contrast, have won their last four games and have only lost once all season, beating Bournemouth 2-1 at the Vitality Stadium to reach the quarter-finals of the Carabao Cup on Wednesday.
+
+Cody Gakpo scored the opener and Darwin Nunez came off the bench to bag a stunning winner to give Klopp's side their fourth straight win.Things are not so rosy in M16 and Gary Neville told Sky Sports that it was a 'worrying' spell for Ten Hag and the club.  
+
+He said: 'At the moment it is worrying stuff for him, losing matches but the performances have been really awful.
+
+'Even the ones they have won in the last few weeks. Nowhere near good enough. 
+
+'You knew if half-decent teams came to Old Trafford they would be back with losses again.
+
+‘You imagine after Sunday, Ten Hag would have had a message or meeting with the players to lift them for tonight.'What do you say after this when you have seen it repeated, the same type of performance. Newcastle have made eight changes, what does he say to them, what is he thinking.'
+
+He also criticised them for losing their discipline after they conceded twice in an eight-minute spell.
+
+'You can't say it hasn’t been coming. Man United have lost their discipline in the last 10 minutes, they have looked anxious and the crowd have been quiet,' he said.
+
+'Garnacho gets muscled off it. Livramento goes around Mount like he is not there. Dalot is sleeping, Almiron is not. Can he finish, by goodness he can.'`;
+sportsDb2[1].content = `By the time Declan Rice eventually took to the pitch on his return to West Ham, his rescue mission had begun to look like an impossible task. The smattering of boos that greeted the return of only the third West Ham captain in history to lift a major honour were quickly drowned out by a rapturous roar, but they not for him. Rice had only been on for a matter of moments when Jarrod Bowen’s deflected strike cannoned in off Aaron Ramsdale and with it, Rice’s old club led his new club by three goals. By the end, Arsenal crashed out of the Carabao Cup with barely a whimper.This was not a happy homecoming for Rice – it was a terrible night for Arsenal, a difficult evening for Ramsdale, and a regretful one for Mikel Arteta. The Arsenal manager took responsibility for the defeat after his side were second-best throughout. The Gunners have biggest priorities this season but with Rice starting on the bench, alongside Bukayo Saka, Gabriel Martinelli, Martin Odegaard and William Saliba, those who were given their chance failed to take it. Jorginho was poor in midfield, the drop-off from Rice significant, while Kai Havertz and Reiss Nelson were ineffective.Rice’s introduction off the bench came too late, as did the arrivals of Saka, Martinelli and Odegaard, who fired a consolation goal that was barely even acknowledged in the 95th minute. Arsenal took this fourth-round tie lightly and were punished: West Ham and David Moyes pulled off their plan and played the occasion well. They thoroughly deserved their place in the quarter-finals and despite drawing Liverpool at Anfield, the home fans will have left dreaming of another cup run.
+
+After Rice helped inspire West Ham to the Europa Conference League last season, delivering a fitting send-off on his final appearance for the club, it could be that the Hammers win another trophy before he does. Rice, of course, has bigger goals than the Carabao Cup, but the competition serves as the perfect way for West Ham to build on last season’s success. West Ham took this seriously: Bowen and Lucas Paqueta were excellent, but the game’s outstanding moment came with Mohammed Kudus’s stunning second for the hosts. West Ham have invested the Rice money wisely.Arsenal, though, had their lack of depth exposed. Arteta’s side were slow and ponderous, and it was no surprise to see Rice was summoned to begin his warm-up midway through the first half, greeted by a warm, rippling standing ovation from much of the London Stadium. After making changes, Arteta left himself with the security of a high-quality bench and it quickly became clear that Rice, Saka, Odegaard and Martinelli would be needed.
+
+Arteta’s side looked flat from the start and the concession of a cheap corner invited West Ham to roll numbers forward and into the box. While Tomas Soucek grappled with Ramsdale on the goalline, Bowen aimed towards the front post with plenty of pace and whip. There was no West Ham player in sight but Arsenal got themselves into a mess: with Ramsdale pushing past Soucek and crashing into the back of Gabriel, Ben White, positioned in the wrong place, bundled into the net with his newly bleached blonde head.
+
+The blame from an Arsenal perspective deserved to be shared around, yet the focus naturally fell on Ramsdale. The England international had his shirt pulled and felt he was fouled, if VAR was used in the Carabao Cup fourth round then it may have been overturned. Yet his appeals towards referee Anthony Taylor were in vain and an important night for the goalkeeper was off to a difficult start. Perhaps Ramsdale, clearly Arsenal’s No 2 now despite Arteta’s curious claim that he would be rotated with David Raya, felt under more pressure than he usually would have been before he was dropped.There was certainly a sense of unease and panic in Arsenal’s defence. Ramsdale and Gabriel invited pressure as Arsenal struggled to play out, which played into West Ham’s hands. The hosts were up for it, Bowen raising the crowd with a challenge deep in Arsenal’s half, West Ham then forcing another corner with their subsequent press. Ramsdale was again targeted by Soucek and although West Ham finished the half without having a shot on target, registering just over 32 per cent of the possession, it felt as if Moyes’s side carried the greater threat on the counter-attack. Despite Arsenal’s possession, Havertz’s flicked header that forced an instinctive save from Lukasz Fabianski was the closest the visitors came.
+
+But half-time came and went without any changes and Arsenal were almost punished within seconds of the restart. Paqueta slipped in Bowen with a reverse pass and Ramsdale was required to stretch his arms to deny the forward’s clever chip. White, this time, cleared the danger as he beat Kudus to the rebound. Still Rice warmed up, the intensity of his sprints on the touchline quickening, and it was just at the moment of the West Ham supporters bantering with their former captain that he “should have signed for a big club” that the Hammers doubled their lead.Although not on the pitch, perhaps Rice could have been credited with the assist: it was with some of the record £105m that West Ham received for Rice this summer that led to the Hammers signing a player of the calibre of Kudus from Ajax. If Kudus has sparkled so far for West Ham with a couple of eye-catching goals and contributions, this was the 23-year-old’s most impressive yet. Controlling a high, diagonal pass, Kudus skilfully directed his touch to cut inside Oleksandr Zinchenko. Then, with the yard of space he had created, Kudus fired a zipping strike through the legs of Gabriel and into the bottom corner.Arteta could not wait any longer: on came Rice to more than a few boos, soon followed by Saka and Martinelli, and then Odegaard. But by then it was too late: another White header caused chaos for Arsenal, only this time it set up Bowen on the edge of the box. Bowen’s strike took a slight deflection off Jakub Kiwior, which left a rather awkward-looking Ramsdale only able to parry the volley into his own net. Rice seemed to struggle on his return, with passes overhit to cheers from the home fans. It was only with the introduction of Odegaard that Arsenal began to look more like themselves, but when the captain fired a low finish past Fabianski in the 95th minute, there was barely anyone left in the away end to applaud it.`;
+sportsDb2[2].content = `Australia all-rounder Mitchell Marsh has flown home from the World Cup in India for personal reasons and will miss Saturday's match against England.
+
+No further details or timeframe for Marsh's return have been given.
+
+It comes a day after Australia batter Glenn Maxwell was ruled out of the match with a concussion, having fallen off the back of a golf buggy on Monday.
+
+Marsh, 32, has played in all six of Australia's matches so far, scoring 225 runs and taking two wickets.
+
+When politics derailed England's World Cup campaign
+He scored a fine 121 against Pakistan as opener earlier in the competition but had dropped down to number three following the return of Travis Head.
+
+"He's got a family issue going on and, like we all know, family is very important," team-mate Marcus Stoinis said on Thursday.
+
+"He's doing the right thing, he's getting home and he's seeing the people he needs to see. I don't think there's a timeline on when he's coming back but I'm sure he'll do what he needs to do at home and then get back.
+
+"He sent me a message last night saying, 'I'll be home for a little bit and then I'm coming back to win this World Cup' so that makes me smile."
+
+The injuries to Marsh and Maxwell mean Australia are picking from just 13 players for the meeting with England in Ahmedabad.
+
+The most likely result is both Stoinis and fellow all-rounder Cameron Green being recalled. Bowling all-rounder Sean Abbott and wicketkeeper Alex Carey are the alternatives.
+
+England are effectively out of contention for the semi-finals after five defeats in six games but a resurgent Australia, who lost their opening two matches, are third in the table after four straight wins.
+
+Both sides have three games remaining and the top four will qualify for the semi-finals.
+
+England will be mathematically out if they lose but their fate could be sealed earlier if other results go against them.`;
+sportsDb2[3].content = `The Texas Rangers are World Series champions for the first time in the franchise's 62-year history after beating the Arizona Diamondbacks 5-0 to clinch the best-of-seven series 4-1.
+
+Neither side registered a run in Phoenix until Mitch Garver drove in Corey Seager in the seventh inning.The Rangers then gave themselves some breathing space in the top of the ninth as Jonah Heim's base hit scored two runs after a fielding error, before Marcus Semien's two-run homer meant the celebrations could truly begin.
+
+The Diamondbacks were in contention for much of the game thanks to a strong outing from starting pitcher Zac Gallen, who threw six scoreless innings before he loaded the bases in the seventh and Garver broke the deadlock.
+
+But the hosts stranded 11 baserunners during game five, allowing Rangers starter Nathan Eovaldi to take the win after blanking the D-backs for six innings.
+
+Reliever Josh Sborz struck out Ketel Marte for the final out.
+
+Shortstop Corey Seager was named as the World Series' most valuable player, an award he also won with the Los Angeles Dodgers in 2020.It has been a long time waiting for a Rangers franchise that began life in 1961 as the Washington Senators.
+
+Confusingly, this was the third major league franchise to bear the Senators name. The first was wound up in 1899, the second left Washington in 1960 and is now the Minnesota Twins, while the third was an expansion franchise which was formed in 1961 and spent 11 years in the capital before moving to Arlington, Texas in 1972.
+
+They lost their first World Series in 2010 to a San Francisco Giants side managed by the man now in charge of the Rangers dugout - Bruce Bochy. He came out of retirement a year ago to answer the call from Texas, and now sits proudly as only the sixth manager to win four World Series titles.
+
+It has not been an easy postseason for the Rangers, who led the American League West division for much of the season, but defeat on the final day of the 162-game regular season handed the AL West title to state rivals the Houston Astros, forcing the Rangers into the wildcard round.
+
+But having lost 41 of their 81 regular-season road games, suddenly Texas were unbeatable away from Arlington, sweeping the Tampa Bay Rays and top-seeded Baltimore Orioles, before winning an unusual AL Championship series against the Astros where all seven games were won by the away team.
+
+Three successive World Series victories in Arizona have now stretched their postseason record to an astonishing 11 successive away wins.
+
+"You guys just wrote history," Bochy told his players in the locker room as the champagne corks were popped.`;
+sportsDb2[4].content = `Having secured their places in the Carabao Cup quarter-finals, Liverpool will play West Ham while Everton were handed a home tie against Fulham in tonight's draw.
+
+The Blues took part in a thrilling demolition of Sean Dyche's former side Burnley on what was an emotional occasion at Goodison Park. The club marked the passing of chairman Bill Kenwright with a 3-0 win, courtesy of goals from James Tarkowski, Amadou Onana and Ashley Young.
+
+Meanwhile the Reds travelled the South Coast as Storm Ciaran also approached. Cody Gakpo's first-half opener was eventually cancelled out by Justin Kluivert, however some late heroics from Darwin Nunez rescued the round for the Jurgen Klopp's men, who remain in the hunt for the prize they won two seasons ago.Elsewhere both Arsenal and Manchester United were knocked out of the competition, blowing it wide open as the final at Wembley approaches.Ball number three was Liverpool's, while Everton took ball number five. Drawn by Izzy Christiansen and Andy Cole pitchside after United's match at Old Trafford, this is how the quarter final shaped up in full:QF Tie 1: Everton vs Fulham
+
+QF Tie 2: Chelsea vs Newcastle United
+
+QF Tie 3: Port Vale vs Middlesbrough
+
+QF Tie 4: Liverpool vs West Ham United It means both of the Merseyside clubs play host to teams from the capital - a first hint that both fixtures won't take place on the same night.
+
+Those two ties have already been played this season, the Blues losing 1-0 to Marco Silva's men on the opening day of the campaign while the Reds overcame the Hammers at Anfield in September.The last time Everton faced this opponent in the League Cup was 10 years ago, the Cottagers running out 2-1 winners on the banks of the River Thames.
+
+Liverpool meanwhile have not played West Ham in this competition since January 1983, when David Hodgson and Graeme Souness scored the crucial goals.
+
+Dates and times will be confirmed for the next round in the coming days, although it is known that the fixtures will take place on the week commencing Monday, December 18.`;
+sportsDb2[5].content = `Bundesliga champions Bayern Munich were stunned 2-1 by third-tier Saarbrücken to dump them out of the German Cup in the second round thanks to a last-gasp winner.
+
+Marcel Gaus netted the winner for the hosts deep into second-half stoppage time to complete a sensational comeback and trigger wild celebrations from the home crowd as the Bayern players looked on in complete shock. Bayern, who last lifted the trophy in 2020, had taken a first-half lead through Thomas Müller before Saarbrücken levelled in first-half added time.“This is a brutal blow for us,” said Müller, with his team next facing title rivals Borussia Dortmund in the Bundesliga on Saturday. “To be eliminated for the third time in the second round of the Cup is not what we strive for. We have to congratulate Saarbrücken for their fight. A bit of luck is also part of it. Then we are hit on the break in the 96th minute but we had wasted too many chances before that.”
+
+Bayern’s coach Thomas Tuchel made several changes to the team that crushed Darmstadt 8-0 on Saturday, leaving their top scorer Harry Kane on the bench along with Kingsley Coman and Jamal Musiala.
+
+The game had been in doubt due to heavy rain but it was the hosts who troubled Bayern more early in the match before the visitors opened their account with their first chance when 20-year-old Frans Krätzig set up Müller in the 15th minute. Bayern also had to take defender Matthias de Ligt off midway through the first half with the Dutch international suffering a knee injury.
+
+It got worse before the break for Bayern as defender Kim Min-jae’s pass was intercepted and Patrick Sontheimer tapped in from close range. The Bavarians struggled to convert chances and paid the price when the hosts launched a quick break and a cutback from the right sailed across the entire box past three Bayern players before Gaus thundered in the winner with a low left-foot drive in the sixth minute of added time.`;
+sportsDb2[6].content = `The Bears gave cornerback Jaylon Johnson permission to look for a trade on Monday, but nothing came together by Tuesday’s deadline and Johnson remains a member of the team heading into Week Nine.
+
+Johnson said on Wednesday that he asked for the trade because he and the team were “really not coming to be on the same page” in talks about a contract extension and he was surprised that one did not materialize. General Manager Ryan Poles indicated no team was willing to meet a price of a late-first or early second-round pick and said that he doesn’t want to lose Johnson, but the cornerback said he’s not looking to continue talks on a new deal at this point.
+
+“I mean, not really too focused on it right now,” Johnson said, via Josh Schrock of NBCSportsChicago.com. “Just want to continue to stack the season. Continue to build my resume best I can, and I have some personal goals that I want to achieve and then from there, we’ll figure that out when that time comes. That’s not what I’m interested in right now. I’m trying to win.”
+
+Johnson said that he feels his play this season has increased his value, but that he’s “not asking to change the market or break records” in an eventual deal. It sounds like any further push to get something done will wait until after the season and the need to work something out with newly acquired edge rusher Montez Sweat as well will leave the Bears with plenty on their plate at that point.`;
+sportsDb2[7].content = `An inquest into the death of an ice hockey player whose neck was fatally cut is due to open on Friday.
+
+Nottingham Panthers player Adam Johnson was pronounced dead in hospital after sustaining the injury from a skate worn by Sheffield Steelers player Matt Petgrave on Saturday evening.
+
+An inquest into the 29-year-old's death will open at the Medico-Legal Centre in Sheffield.
+
+The Nottingham Panthers have described his death as a "freak accident".
+
+South Yorkshire Police said officers had been studying footage of the incident and said its investigation "is likely to take some time".Fans have been invited by the Panthers to attend a memorial event at their home stadium on Saturday.
+
+The Motorpoint Arena will be open from 17:30 GMT for a gathering to remember the player, the club said A two-minute silence in memory of Johnson, who studied at Loughborough Business School, will take place at 20:20 GMT.
+
+The club launched an official fundraising page on Tuesday evening "with the permission of Adam's family".
+
+A commemorative ice hockey puck created in the player's memory was unveiled on Wednesday.
+
+Money raised by the sale of the puck and the fundraising page will support charitable activities in Johnson's home city of Hibbing, Minnesota.He previously played in North America's National Hockey League, playing 13 games for the Pittsburgh Penguins.
+
+Johnson moved to the Swedish Hockey League for the 2020-21 season before spells with the Ontario Reign and the Lehigh Valley Phantoms in the American Hockey League.
+
+He played for the Augsburger Panther in Germany before joining the Nottingham Panthers in August.`;
 
 
+let latestNews = JSON.stringify(sportsDb2);
+localStorage.setItem("latest", latestNews);

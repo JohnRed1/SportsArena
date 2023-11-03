@@ -6,97 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportsArena/Sign_Up</title>
     <link rel="stylesheet" href="css/GS.css">
+    <link rel="stylesheet" href="css/bootstrap.css" />
     
 
 </head>
 
 <body>
-    <div class="container">
 
-       
+    <div class="main">
+        <div class="Visuals">
 
+            <div class="logo">
+                <a href="./index.html">
+                  <h2>SportsArena</h2>
+                </a>
+              </div>
+        
+        
+              <div class="Graphics">
+                <img src="/images/Tagline1-removebg-preview.webp" alt="">
+              </div>
+        
 
-        <div class="Gt-logo">
-            <a href="./index.html">
-                <h2>SportsArena</h2>
-            </a>
         </div>
 
-
-        <div>
-            <form id="signup-form" action="#" method="post" >
-                <div class="form-group">
-                    <label for="Firstname">First name</label>
-                    <input type="text" id="Firstname" name="Firstname" placeholder=" Enter Your First name" required>
-                </div>
-                <div class="form-group">
-                    <label for="Lastname">Last name</label>
-                    <input type="text" id="Lastname" name="Lastname" placeholder=" Enter Your Last name" required>
-                </div>
-                <div class="form-group">
-                    <label for="Username">Username</label>
-                    <input type="text" id="Username" name="Username" placeholder=" Create a Username" required autocomplete="on">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder=" Create a Password" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password"
-                        placeholder=" Confirm Your Password" required>
-                </div>
-                
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="qweryty@gmail.com" required autocomplete="on">
-
-                </div>
-
-                <p class="WarningP"></p>
+        <div class="sign-up-cont">
+            <div class="sign-up">
 
        
 
-                <!-- snackbar -->
-                <div id="empty-field-alert">
+
+                <div class="Gt-logo">
                    
+                    <h2>Create account</h2>
                 </div>
+        
+        
+                <div>
+                    <form id="signup-form" action="#" method="post" >
+                        <div class="form-group">
+                            <label for="Firstname">First name</label>
+                            <input type="text" id="Firstname" name="Firstname" placeholder=" Enter Your First name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Lastname">Last name</label>
+                            <input type="text" id="Lastname" name="Lastname" placeholder=" Enter Your Last name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="qweryty@gmail.com" required autocomplete="on">
+        
+                        </div>
+                        <div class="form-group">
+                            <label for="Username">Username</label>
+                            <input type="text" id="Username" name="Username" placeholder=" Create a Username" required autocomplete="on">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder=" Create a Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password"
+                                placeholder=" Confirm Your Password" required>
+                        </div>
+                        
+        
 
+        
+                        <p class="WarningP"></p>
+        
+               
+        
+                        <!-- snackbar -->
+                        <div id="empty-field-alert">
+                           
+                        </div>
+        
+                              <div class="sign-up-btn">
 
-                
-                <button type="button" id="sign-up-button" onclick="
-                signUp();">Sign Up</button>
-
-                <p>Already have an account? <span><a href="Sign_in.html">Sign In</a></span></p>
-            </form>
+                                  <button type="button" id="sign-up-button" onclick="
+                                  signUp();">Sign Up</button>
+                  
+                                  <p>Already have an account? <span><a href="Sign_in.html">Sign In</a></span></p>
+                              </div>
+                        
+                    </form>
+                </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+             
+        
+        
+        
+            </div>
         </div>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-     
-
 
 
     </div>
+    
 
     <script src="js/SportsArena.js"></script>
 </body>
